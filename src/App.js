@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import AddCourse from './components/courses/AddCourse';
 import MainRoutes from './routes/MainRoutes';
@@ -12,6 +11,7 @@ function App() {
       <MainRoutes />
     </>
   );
+
 }
 
 export default App;

@@ -1,24 +1,81 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useRoutes } from 'react-router-dom';
 import AboutUsPage from '../pages/AboutUsPage';
+import AdminPage from '../pages/AdminPage';
+import AuthPage from '../pages/AuthPage';
+import CartPage from '../pages/CartPage';
+import ContactUsPage from '../pages/ContactUsPage';
+import HomePage from '../pages/HomePage';
+import NotFoundPage from '../pages/NotFoundPage';
+import CourseDetailsPage from '../pages/CourseDetailsPage';
+import CoursesPage from '../pages/CoursesPage';
+import EditCoursePage from '../pages/EditCoursePage';
+import { useAuth } from '../contexts/AuthContextProvider';
+import { ADMIN } from '../helpers/consts';
+
 
 const MainRoutes = () => {
-  const ROUTES = [
+  const { user } = useAuth();
+  const PUBLIC_ROUTES = [
+    {
+      link: '/',
+      element: <HomePage />,
+      id: 1,
+    },
+    {
+      link: '/auth',
+      element: <AuthPage />,
+      id: 2,
+    },
     {
       link: '/about',
       element: <AboutUsPage />,
+      id: 3,
+    },
+    {
+      link: '/courses',
+      element: <CoursesPage />,
+      id: 4,
+    },
+    {
+      link: '/courses/:id',
+      element: <CourseDetailsPage />,
+      id: 5,
+    },
+    {
+      link: '/cart',
+      element: <CartPage />,
+      id: 6,
+    },
+    {
+      link: '/contacts',
+      element: <ContactUsPage />,
+      id: 7,
+    },
+    {
+      link: '*',
+      element: <NotFoundPage />,
+      id: 8,
+    },
+  ];
+
+  const PRIVATE_ROUTES = [
+    {
+      link: '/admin',
+      element: <AdminPage />,
       id: 1,
+    },
+    {
+      link: '/edit/:id',
+      element: <EditCoursePage />,
+      id: 2,
     },
   ];
 
   return (
     <>
       <Routes>
-        {ROUTES.map((item) => {
-          return (
-            <Route path={item.link} element={item.element} key={item.id} />
-          );
-        })}
+
       </Routes>
     </>
   );
