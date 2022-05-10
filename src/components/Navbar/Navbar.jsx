@@ -12,28 +12,31 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SchoolIcon from '@mui/icons-material/School';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import { Link } from 'react-router-dom';
 
 const pages = ['Contacts', 'Courses', 'Teachers', 'Сourse Information'];
 const settings = ['Profile', 'Account', '', 'Logout'];
 
 const Navbar = () => {
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
+  console.log(email);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+
 
   return (
     <AppBar position="static">
@@ -87,12 +90,19 @@ const Navbar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  
+                  <Typography textAlign="center">
+                    {page.name}
+                  </Typography>
+                  
                 </MenuItem>
               ))}
+              
             </Menu>
+
           </Box>
           <SchoolIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -124,36 +134,24 @@ const Navbar = () => {
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="" src="" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            {email ? (
+              <Button
+                sx={{ color: 'black', fontWeight: 'bold' }}
+                onClick={handleLogout}
+              >
+                LOGOUT
+              </Button>
+            ) : (
+              <Link to="/auth">
+                <Button sx={{ color: 'black', fontWeight: 'bold' }}>
+                  LOGIN
+                </Button>
+              </Link>
+            )}
           </Box>
+
+          
         </Toolbar>
       </Container>
     </AppBar>
