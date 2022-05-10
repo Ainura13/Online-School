@@ -15,7 +15,7 @@ import { ADMIN } from '../helpers/consts';
 
 
 const MainRoutes = () => {
-  const { user } = useAuth();
+  // const { user } = useAuth();
   const PUBLIC_ROUTES = [
     {
       link: '/',

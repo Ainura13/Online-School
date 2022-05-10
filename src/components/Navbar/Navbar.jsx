@@ -39,8 +39,8 @@ const Navbar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <SchoolIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
+          <Box mr={4}><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155" alt="123" /></Box>
+          {/* <Typography
             variant="h4"
             noWrap
             component="a"
@@ -56,7 +56,7 @@ const Navbar = () => {
             }}
           >
             Easy to say
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
