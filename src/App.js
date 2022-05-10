@@ -9,12 +9,10 @@ function App() {
   return (
     <>
    <AuthContextProvider>
-
         <CourseContextProvider>
 
       <Navbar/>
 
-      <AddCourse />
       <MainRoutes />
       </CourseContextProvider>
 
