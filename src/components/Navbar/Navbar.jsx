@@ -55,7 +55,7 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            EASIER TO SAY
+            Easy to say
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
