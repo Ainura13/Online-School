@@ -1,14 +1,14 @@
-import './App.css';
-import AuthContextProvider from './contexts/AuthContextProvider';
+import Navbar from './components/Navbar/Navbar';
 import MainRoutes from './routes/MainRoutes';
 
 function App() {
-  return <>
-   <AuthContextProvider>
-     <MainRoutes />
-   </AuthContextProvider>
-  
-  </>;
+  return (
+    <>
+      <Navbar></Navbar>
+      <MainRoutes />
+    </>
+  );
+
 }
 
 export default App;
