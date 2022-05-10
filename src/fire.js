@@ -4,7 +4,6 @@ import 'firebase/compat/app'
 import 'firebase/compat/auth'  
   
   
-
 const firebaseConfig = {
     apiKey: "AIzaSyA_lEVy7Cq2U61T_Ir50In8kxYYe1OFlpo",
     authDomain: "online-school-ae761.firebaseapp.com",
