@@ -15,7 +15,7 @@ import { ADMIN } from '../helpers/consts';
 
 
 const MainRoutes = () => {
-  // const { user } = useAuth();
+  const { user } = useAuth();
   const PUBLIC_ROUTES = [
     {
       link: '/',
@@ -56,6 +56,11 @@ const MainRoutes = () => {
       link: '*',
       element: <NotFoundPage />,
       id: 8,
+    },
+    {
+      link: '/admin',
+      element: <AdminPage />,
+      id: 9,
     },
   ];
 
