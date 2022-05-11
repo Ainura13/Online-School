@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import SchoolIcon from '@mui/icons-material/School';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -11,12 +12,22 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import SchoolIcon from '@mui/icons-material/School';
-import { useAuth } from '../../contexts/AuthContextProvider';
 import { Link } from 'react-router-dom';
-import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Badge } from '@mui/material';
+import { getCountProductsInCart } from '../../helpers/functions';
+import { ADMIN } from '../../helpers/consts';
+import { useCart } from '../../contexts/CartContextProvider';
+import LoginSharpIcon from '@mui/icons-material/LoginSharp';
 
-const pages = ['Contacts', 'Courses', 'Teachers', 'Сourse Information'];
+const pages = [
+  // { name: 'ADMIN', link: '/admin', id: 1 },
+  { name: 'COURSES', link: '/courses', id: 1 },
+  { name: 'ABOUT US', link: '/about', id: 2 },
+  { name: 'CONTACT US', link: '/contacts', id: 3 },
+];
+
 const settings = ['Profile', 'Account', '', 'Logout'];
 
 const Navbar = () => {
@@ -36,6 +47,13 @@ const Navbar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const { addProductToCart } = useCart();
+  // console.log(addProductToCart);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    setCount(getCountProductsInCart);
+  }, []);
 
   return (
     <AppBar position="static">
@@ -47,23 +65,6 @@ const Navbar = () => {
               alt="123"
             />
           </Box>
-          {/* <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'yellow',
-              textDecoration: 'none',
-            }}
-          >
-            Easy to say
-          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -94,11 +95,24 @@ const Navbar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
-              ))}
+              <Box>
+                {pages.map((page) => (
+                  <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                    <Link to={page.link}>
+                      <Typography
+                        sx={{
+                          ml: 'auto',
+                          my: 1,
+                          color: 'black',
+                          display: 'block',
+                        }}
+                      >
+                        {page.name}
+                      </Typography>
+                    </Link>
+                  </MenuItem>
+                ))}
+              </Box>
             </Menu>
           </Box>
           <SchoolIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -120,17 +134,45 @@ const Navbar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              justifyContent: 'center',
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+              <Link to={page.link} key={page.id}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    ml: 'auto',
+                    my: 2,
+                    color: 'black',
+                    display: 'block',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {page.name}
+                </Button>
+              </Link>
             ))}
+
+            {email == ADMIN ? (
+              <Link to="/admin">
+                <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
+              </Link>
+            ) : (
+              <Link to="/cart">
+                <Button sx={{ my: 2, color: 'black' }}>
+                  <Badge badgeContent={count} color="error">
+                    <ShoppingCartIcon />
+                  </Badge>
+                </Button>
+              </Link>
+            )}
           </Box>
+
           <Box sx={{ flexGrow: 0 }}>
             {email ? (
               <Button
@@ -142,7 +184,7 @@ const Navbar = () => {
             ) : (
               <Link to="/auth">
                 <Button sx={{ color: 'white', fontWeight: 'bold' }}>
-                  <AccountCircleSharpIcon />
+                  <LoginSharpIcon />
                 </Button>
               </Link>
             )}

@@ -1,5 +1,20 @@
 {
-    "courses": [
-        
-    ]
+  "courses": [
+    {
+      "name": "456",
+      "description": "123",
+      "price": 123,
+      "picture": "123",
+      "type": "213",
+      "id": 1
+    },
+    {
+      "name": "asd",
+      "description": "asd",
+      "price": null,
+      "picture": "asd",
+      "type": "asd",
+      "id": 2
+    }
+  ]
 }

@@ -35,7 +35,7 @@ const Footer = () => {
     >
       <Container maxWidth="lg">
         <Grid container spacing={8}>
-          <Grid item xs={6} sm={3} sx={{ mt: '0.6rem', my: '0.5rem' }}>
+          <Grid item xs={4} sm={2} sx={{ mt: '0.6rem', my: '0.5rem' }}>
             <Box sx={{ fontWeight: 'medium', fontSize: '1.1rem' }}>Help</Box>
             <Box my={{ xs: 1, sm: 2 }}>
               <Link
