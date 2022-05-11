@@ -9,5 +9,5 @@ export const ACTIONS = {
   };
   export const JSON_API_PRODUCTS = 'http://localhost:8000/courses';
   
-  export const ADMIN = 'admin@gmail.com';
+  export const ADMIN = 'admin@admin.com';
   
