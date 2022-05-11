@@ -7,7 +7,7 @@ export const ACTIONS = {
     GET_CART: 'GET_CART',
     GET_CART_LENGTH: 'GET_CART_LENGTH',
   };
-  export const JSON_API_PRODUCTS = 'http://localhost:8000/products';
+  export const JSON_API_PRODUCTS = 'http://localhost:8000/courses';
   
-  export const ADMIN = 'admin@gmail.com';
+  export const ADMIN = 'admin@admin.com';
   

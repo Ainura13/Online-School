@@ -9,6 +9,7 @@ export const useProducts = () => {
   return useContext(productContext);
 };
 
+
 const INIT_STATE = {
   products: [],
   productDetails: {},
