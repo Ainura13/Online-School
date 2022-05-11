@@ -55,15 +55,18 @@ const Navbar = () => {
   }, []);
 
   return (
-    <AppBar position="static" sx={{bgcolor: '#fff'}}>
+    <AppBar position="static" 
+    sx={{bgcolor: '#fff'}}
+    mb={5}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box mr={4}>
+          <Link to='/' mr={4}>
             <img
               src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155"
               alt="123"
             />
-          </Box>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -182,7 +185,7 @@ const Navbar = () => {
               </Button>
             ) : (
               <Link to="/auth">
-                <Button sx={{ color: 'white', fontWeight: 'bold' }}>
+                <Button sx={{ color: 'black', fontWeight: 'bold' }}>
                   <LoginSharpIcon />
                 </Button>
               </Link>

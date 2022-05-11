@@ -35,7 +35,7 @@ const MainPage = () => {
                         backgroundOverlay: "rbga(0,0,0,.6)"
                     }}/>
                     <Grid container>
-                        <Grid item md={6}>
+                        <Grid item md={5}>
                             <Box sx={{position: 'relative',
                         padding: (9),
                         opacity: (1)
@@ -93,9 +93,9 @@ const MainPage = () => {
                 </Container>
             </Box>
 
-            <Container maxWidth='md'>
+            <Container maxWidth='md' sx={{my: '100px'}}>
                 <Grid>
-                <Typography variant='h2' align='center' color='textPrimary' gutterBottom >
+                <Typography variant='h2' align='center' color='textPrimary' sx={{mb: '50px'}} gutterBottom >
                     Как проходят наши курсы
                     </Typography>
                 </Grid>
