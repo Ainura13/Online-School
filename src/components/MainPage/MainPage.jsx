@@ -20,6 +20,21 @@ const MainPage = () => {
         image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
         title: "Человеческий подход",
         description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        },
+        {
+        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
+        title: "Человеческий подход",
+        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        },
+        {
+        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
+        title: "Человеческий подход",
+        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        },
+        {
+        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
+        title: "Человеческий подход",
+        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
         }
     ]
     return (
@@ -45,7 +60,6 @@ const MainPage = () => {
                         padding: (9)
                         }}>
                                 <Typography
-                                
                                 component='h1'
                                 variant='h3'
                                 color="green"
@@ -54,6 +68,7 @@ const MainPage = () => {
                                     Учите английский онлайн                                
                                 </Typography>
                                 <Typography
+                                sx={{fontSize: 'bold'}}
                                 component='h3'
                                 color="black"
                                 gutterBottom
@@ -83,8 +98,7 @@ const MainPage = () => {
                     </Typography>
 
                     <Typography variant='h5' align='center' color='textSecondary' paragraph>
-                    Уроки проходят на интерактивной учебной платформе — общайтесь с преподавателем и 
-выполняйте задания в одном окне браузера
+                    Уроки проходят на интерактивной учебной платформе — общайтесь с преподавателем и выполняйте задания в одном окне браузера
                     </Typography>
                     <Box>
                         <Grid container spacing={2} justifyContent='center'>
