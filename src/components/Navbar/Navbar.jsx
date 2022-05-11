@@ -23,10 +23,10 @@ import { useCart } from '../../contexts/CartContextProvider';
 
 
 const pages = [
-  { name: 'ADMIN', link: '/admin', id: 1 },
-  { name: 'COURSES', link: '/courses', id: 2 },
-  { name: 'ABOUT US', link: '/about', id: 3 },
-  { name: 'CONTACT US', link: '/contacts', id: 4 },
+  // { name: 'ADMIN', link: '/admin', id: 1 },
+  { name: 'COURSES', link: '/courses', id: 1 },
+  { name: 'ABOUT US', link: '/about', id: 2 },
+  { name: 'CONTACT US', link: '/contacts', id: 3 },
 ];
 
 
