@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import SchoolIcon from '@mui/icons-material/School';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import { Link } from 'react-router-dom';
+import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 
 const pages = ['Contacts', 'Courses', 'Teachers', 'Сourse Information'];
 const settings = ['Profile', 'Account', '', 'Logout'];
@@ -36,13 +37,16 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
 
-
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box mr={4}><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155" alt="123" /></Box>
+          <Box mr={4}>
+            <img
+              src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155"
+              alt="123"
+            />
+          </Box>
           {/* <Typography
             variant="h4"
             noWrap
@@ -90,19 +94,12 @@ const Navbar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  
-                  <Typography textAlign="center">
-                    {page.name}
-                  </Typography>
-                  
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
-              
             </Menu>
-
           </Box>
           <SchoolIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -144,14 +141,12 @@ const Navbar = () => {
               </Button>
             ) : (
               <Link to="/auth">
-                <Button sx={{ color: 'black', fontWeight: 'bold' }}>
-                  LOGIN
+                <Button sx={{ color: 'white', fontWeight: 'bold' }}>
+                  <AccountCircleSharpIcon />
                 </Button>
               </Link>
             )}
           </Box>
-
-          
         </Toolbar>
       </Container>
     </AppBar>

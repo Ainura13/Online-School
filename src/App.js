@@ -4,22 +4,21 @@ import AddCourse from './components/courses/AddCourse';
 import AuthContextProvider from './contexts/AuthContextProvider';
 import MainRoutes from './routes/MainRoutes';
 import CourseContextProvider from './contexts/CourseContextProvider';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   return (
     <>
-   <AuthContextProvider>
+      <AuthContextProvider>
         <CourseContextProvider>
+          <Navbar />
+          <MainRoutes />
+        </CourseContextProvider>
 
-      <Navbar/>
-
-      <MainRoutes />
-      </CourseContextProvider>
-
-   </AuthContextProvider>
-  
-  </>
-  )
-};
+        <Footer />
+      </AuthContextProvider>
+    </>
+  );
+}
 
 export default App;
