@@ -19,16 +19,14 @@ import { Badge } from '@mui/material';
 import { getCountProductsInCart } from '../../helpers/functions';
 import { ADMIN } from '../../helpers/consts';
 import { useCart } from '../../contexts/CartContextProvider';
-
-
+import LoginSharpIcon from '@mui/icons-material/LoginSharp';
 
 const pages = [
-  // { name: 'ADMIN', link: '/admin', id: 1 },
   { name: 'COURSES', link: '/courses', id: 1 },
   { name: 'ABOUT US', link: '/about', id: 2 },
   { name: 'CONTACT US', link: '/contacts', id: 3 },
+  // { name: 'ADMIN', link: '/admin', id: 4 },
 ];
-
 
 const settings = ['Profile', 'Account', '', 'Logout'];
 
@@ -50,20 +48,22 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
   const { addProductToCart } = useCart();
-  // console.log(addProductToCart);
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
     setCount(getCountProductsInCart);
   }, []);
 
-
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{bgcolor: '#fff'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box mr={4}><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155" alt="123" /></Box>
-          
+          <Box mr={4}>
+            <img
+              src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155"
+              alt="123"
+            />
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -95,8 +95,7 @@ const Navbar = () => {
               }}
             >
               <Box>
-
-              {pages.map((page) => (
+                {pages.map((page) => (
                   <MenuItem key={page.id} onClick={handleCloseNavMenu}>
                     <Link to={page.link}>
                       <Typography
@@ -110,12 +109,10 @@ const Navbar = () => {
                         {page.name}
                       </Typography>
                     </Link>
-                </MenuItem>
-              ))}
-              
+                  </MenuItem>
+                ))}
               </Box>
             </Menu>
-
           </Box>
           <SchoolIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -185,8 +182,8 @@ const Navbar = () => {
               </Button>
             ) : (
               <Link to="/auth">
-                <Button sx={{ color: 'black', fontWeight: 'bold' }}>
-                  LOGIN
+                <Button sx={{ color: 'white', fontWeight: 'bold' }}>
+                  <LoginSharpIcon />
                 </Button>
               </Link>
             )}

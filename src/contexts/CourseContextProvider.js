@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { createContext, useContext, useReducer } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ACTIONS, JSON_API_PRODUCTS } from '../helpers/consts';
+import { ACTIONS, JSON_API_CARDS, JSON_API_PRODUCTS } from '../helpers/consts';
 
 export const productContext = createContext();
 
@@ -13,6 +13,7 @@ export const useProducts = () => {
 const INIT_STATE = {
   products: [],
   productDetails: {},
+  cards: [],
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -21,6 +22,8 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, products: action.payload };
     case ACTIONS.GET_PRODUCT_DETAILS:
       return { ...state, productDetails: action.payload };
+    case ACTIONS.GET_CARDS:
+      return { ...state, cards: action.payload};
     default:
       return state;
   }
@@ -80,17 +83,33 @@ const CourseContextProvider = ({children}) => {
     navigate(url);
   };
 
+  const getCards = async () => {
+    const { data } = await axios(
+      `${JSON_API_CARDS}`
+    );
+    dispatch({
+      type: ACTIONS.GET_CARDS,
+      payload: data,
+    });
+  };
+
+  console.log(state.products);
+
+
   const values = {
     products: state.products,
     productDetails: state.productDetails,
+    cards: state.cards,
 
     addProduct,
     getProducts,
     getProductDetails,
     deleteProduct,
     saveEditedProduct,
+    getCards,
 
     fetchByParams,
+
   };
 
 
