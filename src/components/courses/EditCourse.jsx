@@ -1,9 +1,9 @@
 import { Box, Button, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useProducts } from '../../contexts/ProductContexProvider';
+import { useProducts } from '../../contexts/CourseContextProvider';
 
-const EditProduct = () => {
+const EditCourse = () => {
   const { getProductDetails, productDetails, saveEditedProduct } =
     useProducts();
   const { id } = useParams();
@@ -91,4 +91,4 @@ const EditProduct = () => {
   );
 };
 
-export default EditProduct;
+export default EditCourse;

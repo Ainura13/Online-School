@@ -1,9 +1,10 @@
+import React, { useEffect, useState } from 'react';
+
 import { Grid, Pagination } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useProducts } from '../../contexts/ProductContexProvider';
-import ProductCard from './ProductCard';
+import { useProducts } from '../../contexts/CourseContextProvider';
+import CourseCard from './CourseCard';
 
 const CourseList = () => {
   const { products, getProducts } = useProducts();
@@ -51,7 +52,7 @@ const CourseList = () => {
         >
           {products ? (
             currentData().map((item) => (
-              <ProductCard item={item} key={item.id} />
+              <CourseCard item={item} key={item.id} />
             ))
           ) : (
             <h2>Loading...</h2>
