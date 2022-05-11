@@ -185,7 +185,7 @@ const Navbar = () => {
               </Button>
             ) : (
               <Link to="/auth">
-                <Button sx={{ color: 'black', fontWeight: 'bold' }}>
+                <Button sx={{ color: 'black', fontWeight: 'bold'}}>
                   <LoginSharpIcon />
                 </Button>
               </Link>
