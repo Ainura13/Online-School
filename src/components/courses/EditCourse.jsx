@@ -19,7 +19,6 @@ const EditCourse = () => {
     getProductDetails(id);
   }, []);
 
-  console.log(product);
 
   const handleInp = (e) => {
     let obj = {

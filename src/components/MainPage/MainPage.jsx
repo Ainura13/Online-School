@@ -1,42 +1,21 @@
+import React, { useEffect } from 'react';
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 
-import React from 'react';
+
+import { useProducts } from '../../contexts/CourseContextProvider';
 
 const MainPage = () => {
 
-    const cards = [{
-        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/1-on-1.svg",
-        title: "1 на 1",
-        description: "занятия с преподавателем"
-        },
-        {
-        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/time-with-women.svg",
-        title: "50 минут",
-        description: "длительность занятия"
-        },
-        {
-        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/calendar-with-man.svg",
-        title: "2-3 раза в неделю",
-        description: "рекомендуемая интенсивность"
-        },
-        {
-        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/ideas.svg",
-        title: "Преподаватель",
-        description: "локальный или носитель языка"
-        },
-        {
-        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
-        title: "от  850 руб",
-        description: "стоимость за 1 урок"
-        },
-        {
-            image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
-            title: "Понятная грамматика",
-        description: "Обрабатываем правила на простом языке"
-        }
-    ]
+    const { cards, getCards } = useProducts();
+    console.log(cards);
+
+
+    useEffect(() => {
+        getCards();
+      }, []);
+
     return (
         <>
             <Paper sx={{backgroundImage: `url(https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)`, 
@@ -44,7 +23,9 @@ const MainPage = () => {
             color: 'white',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'}}>
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
+            opacity: '0.8'}}>
                 <Container fixed>
                     <Box sx={{
                         position: 'absolute',
@@ -56,7 +37,8 @@ const MainPage = () => {
                     <Grid container>
                         <Grid item md={6}>
                             <Box sx={{position: 'relative',
-                        padding: (9)
+                        padding: (9),
+                        opacity: (1)
                         }}>
                                 <Typography
                                 component='h1'
@@ -76,7 +58,7 @@ const MainPage = () => {
                                 <Typography
                                 component='h5'
                                 color="black"
-                                paragrah
+                                paragraph
                                 >Выбирайте комфортный английский.
                                 Английский по Скайпу — это возможность заниматься по удобному графику из любой точки мира.
                                 Кроме этого в онлайн-школе английского языка «Easy to say» вы найдете:
@@ -119,8 +101,8 @@ const MainPage = () => {
                 </Grid>
                 <Grid container spacing={4}>
                     {cards.map((card)=>(
-                        <Grid item key={card} xs={12} sm={6} md={4}>
-                            <Card sx={{minHeight: '72vh', mb:"6vh"}}>
+                        <Grid item key={card.id} xs={12} sm={6} md={4}>
+                            <Card sx={{height: '360px', mb:"6vh"}}>
                                 <CardMedia
                                 sx={{paddingTop:'70%' }}
                                 image={card.image}
@@ -145,7 +127,7 @@ const MainPage = () => {
                     Нам доверяют
                     </Typography>
                 </Grid>
-            <Grid conteiner  sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}  >
+            <Grid container  sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}  >
                 <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}} >
                 <Typography  color='#2e7d32' variant='h5' gutterBottom>10
                 лет</Typography>

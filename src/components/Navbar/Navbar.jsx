@@ -23,10 +23,10 @@ import { useCart } from '../../contexts/CartContextProvider';
 
 
 const pages = [
-  // { name: 'ADMIN', link: '/admin', id: 1 },
   { name: 'COURSES', link: '/courses', id: 1 },
   { name: 'ABOUT US', link: '/about', id: 2 },
   { name: 'CONTACT US', link: '/contacts', id: 3 },
+  // { name: 'ADMIN', link: '/admin', id: 4 },
 ];
 
 
@@ -50,7 +50,6 @@ const Navbar = () => {
     setAnchorElNav(null);
   };
   const { addProductToCart } = useCart();
-  // console.log(addProductToCart);
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
@@ -59,7 +58,7 @@ const Navbar = () => {
 
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" bgcolor='#e3f2fd'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box mr={4}><img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155" alt="123" /></Box>
