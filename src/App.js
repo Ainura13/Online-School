@@ -14,9 +14,10 @@ function App() {
           <CartContextProvider>
             <Navbar />
             <MainRoutes />
+            
+          <Footer />
           </CartContextProvider>
         </CourseContextProvider>
-        <Footer />
       </AuthContextProvider>
     </>
   );
