@@ -7,34 +7,34 @@ import React from 'react';
 const MainPage = () => {
 
     const cards = [{
-        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
-        title: "Человеческий подход",
-        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/1-on-1.svg",
+        title: "1 на 1",
+        description: "занятия с преподавателем"
         },
         {
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlPsOI4S21zljuLsUzD8Hwp8cUI-C0YiS-APRsNn821PVsEIHie0gkDEctkFZERLdit1w&usqp=CAU",
-        title: "Cbk",
-        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/time-with-women.svg",
+        title: "50 минут",
+        description: "длительность занятия"
         },
         {
-        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
-        title: "Человеческий подход",
-        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/calendar-with-man.svg",
+        title: "2-3 раза в неделю",
+        description: "рекомендуемая интенсивность"
         },
         {
-        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
-        title: "Человеческий подход",
-        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/ideas.svg",
+        title: "Преподаватель",
+        description: "локальный или носитель языка"
         },
         {
-        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
-        title: "Человеческий подход",
-        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+        image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
+        title: "от  850 руб",
+        description: "стоимость за 1 урок"
         },
         {
-        image: "https://thumbs.dreamstime.com/b/логотип-вектора-я-языка-туризма-77863429.jpg",
-        title: "Человеческий подход",
-        description: "Учитываем ваши особенности, а не занимаемся конвеерным обучением"
+            image: "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
+            title: "Понятная грамматика",
+        description: "Обрабатываем правила на простом языке"
         }
     ]
     return (
@@ -42,7 +42,6 @@ const MainPage = () => {
             <Paper sx={{backgroundImage: `url(https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)`, 
             position: 'relative', 
             color: 'white',
-            marginBottom: (4),
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'}}>
@@ -113,15 +112,20 @@ const MainPage = () => {
             </Box>
 
             <Container maxWidth='md'>
+                <Grid>
+                <Typography variant='h2' align='center' color='textPrimary' gutterBottom >
+                    Как проходят наши курсы
+                    </Typography>
+                </Grid>
                 <Grid container spacing={4}>
                     {cards.map((card)=>(
                         <Grid item key={card} xs={12} sm={6} md={4}>
-                            <Card>
+                            <Card sx={{minHeight: '72vh', mb:"6vh"}}>
                                 <CardMedia
-                                sx={{paddingTop:'56.25%' }}
+                                sx={{paddingTop:'70%' }}
                                 image={card.image}
                                 title='Image title'/>
-                                <CardContent>
+                                <CardContent sx={{flexGrow: (1), paddingBottom: (1)}}>
                                     <Typography variant='h5' gutterBottom>
                                         {card.title}
                                     </Typography>
@@ -129,15 +133,55 @@ const MainPage = () => {
                                         {card.description}
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
-                                    <Button size='small' color='success'>View</Button>
-                                   
-                                </CardActions>
                             </Card>
                         </Grid>
                     ))}
                 </Grid>
             </Container>
+            <Box sx={{backgroundColor: '#f5f5f5', padding: (9)}}>
+            <Container>
+            <Grid>
+                <Typography variant='h2' align='center' color='textPrimary' gutterBottom>
+                    Нам доверяют
+                    </Typography>
+                </Grid>
+            <Grid conteiner  sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}  >
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}} >
+                <Typography  color='#2e7d32' variant='h5' gutterBottom>10
+                лет</Typography>
+                <Typography>
+                    лидерства на рынке
+                </Typography>
+                </Grid>
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                <Typography color='#2e7d32' variant='h5' gutterBottom>900
+                преподавателей</Typography>
+                <Typography >
+                    в штате школы
+                </Typography>
+                </Grid>
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                <Typography color='#2e7d32' variant='h5' gutterBottom>70% студентов</Typography>
+                <Typography >
+                    по рекомендациям
+                </Typography>
+                </Grid>
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                <Typography color='#2e7d32' variant='h5' gutterBottom>20 авторских</Typography>
+                <Typography >
+                    программ по обучениям
+                </Typography>
+                </Grid>
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                <Typography color='#2e7d32' variant='h5' gutterBottom>50000 
+                студентов</Typography>
+                <Typography >
+                    достигли цели
+                </Typography>
+                </Grid>
+            </Grid>
+            </Container>
+            </Box>
         </>
     );
 };
