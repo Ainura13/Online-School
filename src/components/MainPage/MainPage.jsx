@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-
-
-
+import { Splide, SplideSlide} from '@splidejs/react-splide';
 import { useProducts } from '../../contexts/CourseContextProvider';
+import '@splidejs/react-splide/css/sea-green';
+
 
 const MainPage = () => {
 
@@ -15,6 +15,15 @@ const MainPage = () => {
     useEffect(() => {
         getCards();
       }, []);
+
+      const options = {
+        type         : 'loop',
+        gap          : '1rem',
+        autoplay     : true,
+        pauseOnHover : false,
+        resetProgress: false,
+        height       : '15rem',
+      };
 
     return (
         <>
@@ -101,7 +110,7 @@ const MainPage = () => {
                 </Grid>
                 <Grid container spacing={4}>
                     {cards.map((card)=>(
-                        <Grid item key={card.id} xs={12} sm={6} md={4}>
+                        <Grid item key={card.id} >
                             <Card sx={{height: '360px', mb:"6vh"}}>
                                 <CardMedia
                                 sx={{paddingTop:'70%' }}
@@ -164,6 +173,54 @@ const MainPage = () => {
             </Grid>
             </Container>
             </Box>
+            <Grid container>
+                <Grid item md={6}>
+            <Splide options={ {rewind: true, gap   : '1rem',} } aria-label="My Favorite Images" >
+      <SplideSlide>
+        <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/jacob.jpg" alt="Image 1"
+        sx={{height: '40%'}}/>
+        <Typography variant='h3' align='center' color='textPrimary' gutterBottom>Jacob</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Возраст: 27 года</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Образование: TOEFL certificate</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Стаж: 6 лет</Typography>
+      </SplideSlide>
+      <SplideSlide>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/natalia-d.jpg" alt="Image 2"
+        sx={{height: '40%'}}/>
+        <Typography variant='h3' align='center' color='textPrimary' gutterBottom>Natali D</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Возраст: 33 года</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Образование: Филолог педагог</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Стаж: 6 лет</Typography>
+      </SplideSlide>
+      <SplideSlide>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/sandy-m.jpg" alt="Image 3"
+        sx={{height: '40%'}}/>
+        <Typography variant='h3' align='center' color='textPrimary' gutterBottom>Sandy M</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Возраст: 33 года</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Образование: TESOL certificate</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Стаж: 7 лет</Typography>
+      </SplideSlide>
+      <SplideSlide>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/ekaterina-e.jpg" alt="Image 4"
+        sx={{height: '40%'}}/>
+        <Typography variant='h3' align='center' color='textPrimary' gutterBottom>Ekaterina E</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Возраст: 31 года</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Образование:  Филолог педагог</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Стаж: 10 лет</Typography>
+      </SplideSlide>
+      <SplideSlide>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/ekaterina-e.jpg" alt="Image 4"
+        sx={{height: '40%'}}/>
+        <Typography variant='h3' align='center' color='textPrimary' gutterBottom>Andrey M</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Возраст: 25 лет</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Образование: Филолог TOEFL certificate</Typography>
+        <Typography variant='h5' align='center' color='textPrimary' gutterBottom>Стаж: 4 года</Typography>
+      </SplideSlide>
+    </Splide>
+                </Grid>
+             </Grid>
+  
+
         </>
     );
 };
