@@ -104,7 +104,7 @@ const MainPage = () => {
 
             <Container maxWidth='md' sx={{my: '100px'}}>
                 <Grid>
-                <Typography variant='h2' align='center' color='textPrimary' sx={{mb: '50px'}} gutterBottom >
+                <Typography variant='h2' align='center' color='textPrimary' sx={{mb: '90px'}} gutterBottom >
                     Как проходят наши курсы
                     </Typography>
                 </Grid>
