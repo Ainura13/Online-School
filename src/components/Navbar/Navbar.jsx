@@ -20,6 +20,9 @@ import { getCountProductsInCart } from '../../helpers/functions';
 import { ADMIN } from '../../helpers/consts';
 import { useCart } from '../../contexts/CartContextProvider';
 import LoginSharpIcon from '@mui/icons-material/LoginSharp';
+import Drawer from '@mui/material/Drawer';
+import Cart from '../cart/Cart';
+
 
 const pages = [
   { name: 'COURSES', link: '/courses', id: 1 },
@@ -52,7 +55,38 @@ const Navbar = () => {
 
   React.useEffect(() => {
     setCount(getCountProductsInCart);
-  }, []);
+  }, [addProductToCart]);
+
+  //Cart
+
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <Cart />
+
+    </Box>
+  );
+
+  console.log(count)
 
   return (
     <AppBar position="static" 
@@ -165,13 +199,30 @@ const Navbar = () => {
                 <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
               </Link>
             ) : (
-              <Link to="/cart">
                 <Button sx={{ my: 2, color: 'black' }}>
                   <Badge badgeContent={count} color="error">
-                    <ShoppingCartIcon />
+                    
+                    {['right'].map((anchor) => (
+                    <React.Fragment key={anchor}>
+                      <Button onClick={toggleDrawer(anchor, true)}>      
+                        <ShoppingCartIcon 
+                        color= 'success'
+                        />
+                      </Button>
+                      <Drawer
+                        anchor={anchor}
+                        open={state[anchor]}
+                        onClose={toggleDrawer(anchor, false)}
+                        PaperProps={{
+                          sx: { width: "30%" },
+                        }}
+                      >
+                        {list(anchor)}
+                      </Drawer>
+                    </React.Fragment>
+                    ))}
                   </Badge>
                 </Button>
-              </Link>
             )}
           </Box>
 
