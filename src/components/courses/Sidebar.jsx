@@ -40,38 +40,6 @@ const SideBar = () => {
           variant="standard"
         />
 
-        <Grid>
-          <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="all"
-              name="radio-buttons-group"
-              onChange={(e) => fetchByParams('type', e.target.value)}
-            >
-              <FormControlLabel value="all" control={<Radio />} label="all" />
-
-              <FormControlLabel
-                value="telephone"
-                control={<Radio />}
-                label="telephone"
-              />
-
-              <FormControlLabel
-                value="laptop"
-                control={<Radio />}
-                label="laptop"
-              />
-
-              <FormControlLabel
-                value="watch"
-                control={<Radio />}
-                label="watch"
-              />
-            </RadioGroup>
-          </FormControl>
-        </Grid>
-
         <FormControl>
           <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
           <RadioGroup
@@ -82,21 +50,21 @@ const SideBar = () => {
           >
             <FormControlLabel value="all" control={<Radio />} label="all" />
             <FormControlLabel
-              value="100"
+              value="10"
               control={<Radio />}
-              label="less than 100$"
+              label="less than 10$"
             />
 
             <FormControlLabel
-              value="600"
+              value="30"
               control={<Radio />}
-              label="less than 600$"
+              label="less than 30$"
             />
 
             <FormControlLabel
-              value="1300"
+              value="50"
               control={<Radio />}
-              label="less than 1300$"
+              label="less than 50$"
             />
           </RadioGroup>
         </FormControl>
