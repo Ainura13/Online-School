@@ -149,49 +149,5 @@
       "id": 6
 
       }
-  ],
-  "cards": [
-    {
-      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/1-on-1.svg",
-      "title": "1 на 1",
-      "description": "Занятия с преподавателем",
-      "id": 1
-
-      },
-      {
-      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/time-with-women.svg",
-      "title": "50 минут",
-      "description": "Длительность занятия",
-      "id": 2
-
-      },
-      {
-      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/calendar-with-man.svg",
-      "title": "2-3 раза в неделю",
-      "description": "Рекомендуемая интенсивность",
-      "id": 3
-
-      },
-      {
-      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/ideas.svg",
-      "title": "Преподаватель",
-      "description": "Локальный или носитель языка",
-      "id": 4
-
-      },
-      {
-      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
-      "title": "от  850 руб",
-      "description": "Стоимость за 1 урок",
-      "id": 5
-
-      },
-      {
-          "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
-          "title": "Понятная грамматика",
-      "description": "Обрабатываем правила на простом языке",
-      "id": 6
-
-      }
   ]
 }

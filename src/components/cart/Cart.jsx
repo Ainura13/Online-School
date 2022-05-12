@@ -8,18 +8,15 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useCart } from '../../contexts/CartContextProvider';
-import { autocompleteClasses, Button } from '@mui/material';
+import { autocompleteClasses, Button, Divider } from '@mui/material';
+import { hover } from '@testing-library/user-event/dist/hover';
+import { Box } from '@mui/system';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#a5d6a7',
     color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
-  },
-  [`&.${tableCellClasses.table}`]: {
-    width: '100vw',
   },
 }));
 
@@ -35,7 +32,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 
 export default function Cart() {
-  const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
+  const { getCart, cart, deleteCartProduct } = useCart();
 
   console.log(cart);
 
@@ -50,16 +47,13 @@ export default function Cart() {
 
   return (
     <TableContainer >
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table sx={{ minWidth: 700, mb: 7 }} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Picture</StyledTableCell>
             <StyledTableCell align="right">Name</StyledTableCell>
-            <StyledTableCell align="right">Type</StyledTableCell>
             <StyledTableCell align="right">Description</StyledTableCell>
             <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Count</StyledTableCell>
-            <StyledTableCell align="right">SubPrice</StyledTableCell>
             <StyledTableCell align="right">-</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -70,26 +64,10 @@ export default function Cart() {
                 <img src={row.item.picture} alt="" width="70" height="70" />
               </StyledTableCell>
               <StyledTableCell align="right">{row.item.name}</StyledTableCell>
-              <StyledTableCell align="right">{row.item.type}</StyledTableCell>
-              <StyledTableCell align="right">
+              <StyledTableCell sx={{fontSize: '10px'}} align="right">
                 {row.item.description}
               </StyledTableCell>
               <StyledTableCell align="right">{row.item.price}</StyledTableCell>
-
-              <StyledTableCell align="right">
-                <input
-                  type="number"
-                  min={1}
-                  max={1000}
-                  value={row.count}
-                  onChange={(e) =>
-                    changeProductCount(e.target.value, row.item.id)
-                  }
-                />
-              </StyledTableCell>
-
-              <StyledTableCell align="right">{row.subPrice}</StyledTableCell>
-
               <StyledTableCell align="right">
                 <Button onClick={() => deleteCartProduct(row.item.id)}>
                   DELETE
@@ -99,8 +77,12 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
+            <Divider sx={{mb: 5}}/>
+            <Box sx={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
 
-      <Button onClick={cartCleaner}> BUY NOW FOR {cart?.totalPrice} $</Button>
+      <Button variant='outlined' sx={{maxHeight: 35}} onClick={cartCleaner}> Clean cart</Button>
+      <Button variant='contained' sx={{my: 3, alignSelf: 'center', border: '1px solid #2e7d32', borderRadius: '4%', color: 'white', bgcolor: '#a5d6a7'}} onClick={cartCleaner}> BUY NOW FOR {cart?.totalPrice} $</Button>
+            </Box>
     </TableContainer>
   );
 }
