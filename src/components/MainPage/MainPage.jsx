@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react';
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
-import { Box } from '@mui/system';
-
-
-
+import { Button, Card, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
+import { Box, width } from '@mui/system';
+import { Splide, SplideSlide} from '@splidejs/react-splide';
 import { useProducts } from '../../contexts/CourseContextProvider';
+import '@splidejs/react-splide/css/sea-green';
+import SchoolIcon from '@mui/icons-material/School';
+import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+
 
 const MainPage = () => {
 
@@ -15,6 +19,15 @@ const MainPage = () => {
     useEffect(() => {
         getCards();
       }, []);
+
+      const options = {
+        type         : 'loop',
+        gap          : '1rem',
+        autoplay     : true,
+        pauseOnHover : false,
+        resetProgress: false,
+        height       : '15rem',
+      };
 
     return (
         <>
@@ -95,7 +108,7 @@ const MainPage = () => {
 
             <Container maxWidth='md' sx={{my: '100px'}}>
                 <Grid>
-                <Typography variant='h2' align='center' color='textPrimary' sx={{mb: '50px'}} gutterBottom >
+                <Typography variant='h2' align='center' color='textPrimary' sx={{mb: '90px'}} gutterBottom >
                     Как проходят наши курсы
                     </Typography>
                 </Grid>
@@ -128,7 +141,7 @@ const MainPage = () => {
                     </Typography>
                 </Grid>
             <Grid container  sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}  >
-                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}} >
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}} xs={12} sm={6} md={3} >
                 <Typography  color='#2e7d32' variant='h5' gutterBottom>10
                 лет</Typography>
                 <Typography>
@@ -164,6 +177,99 @@ const MainPage = () => {
             </Grid>
             </Container>
             </Box>
+            <Grid container sx={{display: 'flex', flexDirection: 'row', alignItems: 'space-around', flexWrap:'wrap', backgroundColor: '#a5d6a7', padding: (9)}}>
+                <Grid item md={4}>
+            <Splide options={ {rewind: true, gap   : '1rem',} } aria-label="My Favorite Images" >
+      <SplideSlide>
+          <Container sx={{bgcolor:'white', borderRadius:'5%'}}>
+        <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/jacob.jpg" alt="Image 1" style={{width: '100%', paddingTop:'20px',  margin: '20px auto'}}/>
+        <Typography variant='h4' align='center' color='textPrimary' gutterBottom>Jacob</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Возраст: 27 года</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Образование: TOEFL certificate</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom sx={{pb:'30px'}}>Стаж: 6 лет</Typography>
+          </Container>
+      </SplideSlide>
+      
+      <SplideSlide >
+      <Container sx={{bgcolor:'white', borderRadius:'5%'}}>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/natalia-d.jpg" alt="Image 2" style={{width: '100%', paddingTop:'20px',  margin: '20px auto'}}/>
+        <Typography variant='h4' align='center' color='textPrimary' gutterBottom>Natali D</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Возраст: 33 года</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Образование: Филолог педагог</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom sx={{pb:'30px'}}>Стаж: 6 лет</Typography>
+        </Container>
+      </SplideSlide>
+      
+      <SplideSlide>
+      <Container sx={{bgcolor:'white', borderRadius:'5%'}}>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/sandy-m.jpg" alt="Image 3" style={{width: '100%', paddingTop:'20px',  margin: '20px auto'}}/>
+        <Typography variant='h4' align='center' color='textPrimary' gutterBottom>Sandy M</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Возраст: 33 года</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Образование: TESOL certificate</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom sx={{pb:'30px'}}>Стаж: 7 лет</Typography>
+        </Container>
+      </SplideSlide>
+      <SplideSlide>
+      <Container sx={{bgcolor:'white', borderRadius:'5%'}}>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/ekaterina-e.jpg" alt="Image 4" style={{width: '100%', paddingTop:'20px',  margin: '20px auto'}}/>
+        <Typography variant='h4' align='center' color='textPrimary' gutterBottom>Ekaterina E</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Возраст: 31 года</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Образование:  Филолог педагог</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom sx={{pb:'30px'}}>Стаж: 10 лет</Typography>
+        </Container>
+      </SplideSlide>
+      <SplideSlide>
+      <Container sx={{bgcolor:'white', borderRadius:'5%'}}>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/angelina.jpg" alt="Image 5" style={{width: '100%', paddingTop:'20px', margin: '20px auto'}}/>
+        <Typography variant='h4' align='center' color='textPrimary' gutterBottom>Angelina</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Возраст: 27 лет</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Образование: Филолог</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom sx={{pb:'30px'}}>Стаж: 6 лет</Typography>
+        </Container>
+        </SplideSlide>
+      <SplideSlide>
+      <Container sx={{bgcolor:'white', borderRadius:'5%'}}>
+      <img src="https://cdn-englishdom.gcdn.co/dsd/img/page/skype/teachers/alan.jpg" alt="Image 6" style={{width: '100%', paddingTop:'20px', margin: '20px auto'}}/>
+        <Typography variant='h4' align='center' color='textPrimary' gutterBottom>Alan</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Возраст: 54 года</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom>Образование: TEFL certificate</Typography>
+        <Typography variant='h6' align='center' color='textPrimary' gutterBottom sx={{pb:'30px'}}>Стаж: 12 лет</Typography>
+        </Container>
+        </SplideSlide>
+    </Splide>
+                </Grid >
+                <Grid item sx={{height: 400, display:'flex', flexDirection: 'column', justifyContent:'space-evenly', my: '10px', paddingTop:'20vh', paddingLeft:'5vh'}}>
+                <Box sx={{display:'flex'}}>
+                <SchoolIcon sx={{fontSize:'10vh', color: 'white'}}/>
+                <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary'>
+                Имеют педагогическое образование и многолетний опыт работы
+                </Typography >
+                </Box>
+                <Box sx={{display:'flex'}}>
+                <TextSnippetIcon sx={{fontSize:'10vh', color: 'white'}}/>
+                <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary' gutterBottom>
+                Проходят многоэтапный отбор
+                </Typography >
+                </Box>
+                <Box sx={{display:'flex'}}>
+                <FavoriteIcon sx={{fontSize:'10vh', color: 'white'}}/>
+                <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary'>
+                Подбираются индивидуально под каждого студента
+                </Typography >
+                </Box>
+                <Box sx={{display:'flex'}}>
+                <AutoGraphIcon sx={{fontSize:'10vh', color: 'white'}}/>
+                <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary'>
+                Проходят регулярные тренинги и курсы повышения квалификации
+                </Typography >
+                </Box>
+               
+
+                </Grid>
+             </Grid>
+             
+  
+
         </>
     );
 };

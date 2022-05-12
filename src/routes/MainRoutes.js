@@ -3,7 +3,6 @@ import { Navigate, Route, Routes, useRoutes } from 'react-router-dom';
 import AboutUsPage from '../pages/AboutUsPage';
 import AdminPage from '../pages/AdminPage';
 import AuthPage from '../pages/AuthPage';
-import CartPage from '../pages/CartPage';
 import ContactUsPage from '../pages/ContactUsPage';
 import HomePage from '../pages/HomePage';
 import NotFoundPage from '../pages/NotFoundPage';
@@ -43,19 +42,14 @@ const MainRoutes = () => {
       id: 5,
     },
     {
-      link: '/cart',
-      element: <CartPage />,
-      id: 6,
-    },
-    {
       link: '/contacts',
       element: <ContactUsPage />,
-      id: 7,
+      id: 6,
     },
     {
       link: '*',
       element: <NotFoundPage />,
-      id: 8,
+      id: 7,
     },
   ];
 

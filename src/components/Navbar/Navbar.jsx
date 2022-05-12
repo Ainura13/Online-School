@@ -15,11 +15,15 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CloseIcon from '@mui/icons-material/Close';
 import { Badge } from '@mui/material';
 import { getCountProductsInCart } from '../../helpers/functions';
 import { ADMIN } from '../../helpers/consts';
 import { useCart } from '../../contexts/CartContextProvider';
 import LoginSharpIcon from '@mui/icons-material/LoginSharp';
+import Drawer from '@mui/material/Drawer';
+import Cart from '../cart/Cart';
+
 
 const pages = [
   { name: ' НАШИ КУРСЫ', link: '/courses', id: 1 },
@@ -52,7 +56,34 @@ const Navbar = () => {
 
   React.useEffect(() => {
     setCount(getCountProductsInCart);
-  }, []);
+  }, [addProductToCart]);
+
+  //Cart
+
+  const [state, setState] = React.useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ widt: 'auto' }}
+      role="presentation"
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <Cart />
+
+    </Box>
+  );
+
+  console.log(count)
 
   return (
     <AppBar position="static" sx={{ bgcolor: '#fff' }} mb={5}>
@@ -162,13 +193,35 @@ const Navbar = () => {
                 <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
               </Link>
             ) : (
-              <Link to="/cart">
                 <Button sx={{ my: 2, color: 'black' }}>
                   <Badge badgeContent={count} color="error">
-                    <ShoppingCartIcon />
+                    
+                    {['right'].map((anchor) => (
+                    <React.Fragment key={anchor}>
+                      <Button onClick={toggleDrawer(anchor, true)}>      
+                        <ShoppingCartIcon 
+                        color= 'success'
+                        />
+                      </Button>
+                      <Drawer
+                        anchor={anchor}
+                        variant='persistent'
+                        open={state[anchor]}
+                        PaperProps={{
+                          sx: { width: "40%" },
+                        }}
+                        
+                      >
+                        
+                        <CloseIcon 
+                        onClick={toggleDrawer(anchor, false)}
+                        sx={{alignSelf: 'flex-end'}}/>
+                        {list(anchor)}
+                      </Drawer>
+                    </React.Fragment>
+                    ))}
                   </Badge>
                 </Button>
-              </Link>
             )}
           </Box>
 
