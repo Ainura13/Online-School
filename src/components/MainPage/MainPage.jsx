@@ -110,7 +110,7 @@ const MainPage = () => {
                 </Grid>
                 <Grid container spacing={4}>
                     {cards.map((card)=>(
-                        <Grid item key={card.id} >
+                        <Grid item key={card.id} xs={12} sm={6} md={4}>
                             <Card sx={{height: '360px', mb:"6vh"}}>
                                 <CardMedia
                                 sx={{paddingTop:'70%' }}
