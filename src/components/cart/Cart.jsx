@@ -19,7 +19,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     fontSize: 14,
   },
   [`&.${tableCellClasses.table}`]: {
-    width: 'auto',
+    width: '100vw',
   },
 }));
 
