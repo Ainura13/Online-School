@@ -128,7 +128,7 @@ const MainPage = () => {
                     </Typography>
                 </Grid>
             <Grid container  sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}  >
-                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}} >
+                <Grid item sx={{display:'flex', flexDirection:'column', alignItems:'center'}} xs={12} sm={6} md={3} >
                 <Typography  color='#2e7d32' variant='h5' gutterBottom>10
                 лет</Typography>
                 <Typography>
