@@ -15,6 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CloseIcon from '@mui/icons-material/Close';
 import { Badge } from '@mui/material';
 import { getCountProductsInCart } from '../../helpers/functions';
 import { ADMIN } from '../../helpers/consts';
@@ -60,9 +61,6 @@ const Navbar = () => {
   //Cart
 
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
     right: false,
   });
 
@@ -76,9 +74,8 @@ const Navbar = () => {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ widt: 'auto' }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Cart />
@@ -199,7 +196,7 @@ const Navbar = () => {
                 <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
               </Link>
             ) : (
-                <Button sx={{ my: 2, color: 'black' }}>
+                <Box sx={{ my: 2, color: 'black' }}>
                   <Badge badgeContent={count} color="error">
                     
                     {['right'].map((anchor) => (
@@ -211,18 +208,24 @@ const Navbar = () => {
                       </Button>
                       <Drawer
                         anchor={anchor}
+                        variant='persistent'
                         open={state[anchor]}
                         onClose={toggleDrawer(anchor, false)}
                         PaperProps={{
-                          sx: { width: "30%" },
+                          sx: { width: "40%" },
                         }}
+                        
                       >
+                        
+                        <CloseIcon 
+                        onClick={toggleDrawer(anchor, false)}
+                        sx={{alignSelf: 'flex-end'}}/>
                         {list(anchor)}
                       </Drawer>
                     </React.Fragment>
                     ))}
                   </Badge>
-                </Button>
+                </Box>
             )}
           </Box>
 
