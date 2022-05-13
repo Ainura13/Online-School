@@ -51,6 +51,7 @@ const ContactUs = () => {
           sx={{ borderRadius: '20px', marginTop: '2%' }}
           variant="contained"
           size="large"
+          color="success"
         >
           Отправить
         </Button>
