@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Button, Card, CardContent, CardMedia, Container, Grid, Paper, Typography } from '@mui/material';
-import { Box, width } from '@mui/system';
+import { Box } from '@mui/system';
 import { Splide, SplideSlide} from '@splidejs/react-splide';
 import { useProducts } from '../../contexts/CourseContextProvider';
 import '@splidejs/react-splide/css/sea-green';
