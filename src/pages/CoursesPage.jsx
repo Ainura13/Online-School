@@ -8,7 +8,6 @@ import SideBar from '../components/courses/Sidebar';
 const CoursesPage = () => {
     return (
         <Box p={5}>
-      ProductsPage
       <Grid container spacing={3}>
         <CourseList />
         <SideBar />

@@ -20,7 +20,7 @@ const CourseList = () => {
   }, [searchParams]);
 
   const [page, setPage] = useState(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 6;
   const count = Math.ceil(products.length / itemsPerPage);
 
   const handleChange = (e, p) => {
@@ -45,8 +45,9 @@ const CourseList = () => {
         <Box
           sx={{
             display: 'flex',
+            justifyContent:'space-evenly',
             flexWrap: 'wrap',
-            minHeight: '40vh',
+            minHeight: '50vh',
             mb: '3.5vh',
           }}
         >
@@ -61,6 +62,7 @@ const CourseList = () => {
 
         <Pagination
           count={count}
+          color='secondary'
           variant="outlined"
           shape="rounded"
           onChange={handleChange}
