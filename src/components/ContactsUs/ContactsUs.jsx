@@ -3,6 +3,7 @@ import {
   Button,
   Grid,
   makeStyles,
+  Paper,
   TextField,
   Typography,
 } from '@mui/material';
@@ -11,7 +12,16 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div>
+    <>
+      <Paper sx={{
+      height: '70vh' ,
+      backgroundImage: `url(https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80)`, 
+      position: 'relative', 
+      color: 'white',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right',
+      opacity: '0.85'}}>
       <Box
         noValidate
         autoComplete="off"
@@ -22,8 +32,9 @@ const ContactUs = () => {
           variant="h2"
           component="h1"
           marginBottom={3}
+          color='textPrimary'
         >
-          Запись на занятия
+          Свяжитесь с нами
         </Typography>
 
         <TextField
@@ -56,7 +67,8 @@ const ContactUs = () => {
           Отправить
         </Button>
       </Box>
-    </div>
+      </Paper>
+    </>
   );
 };
 

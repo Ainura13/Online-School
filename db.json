@@ -5,15 +5,15 @@
       "description": "Повышение уровня знаний. 70% урока ваша разговорная речь. Преодоление языкового и слухового барьера",
       "price": 10,
       "picture": "https://englex.ru/app/uploads/general-course@2x.png",
-      "type": "",
+      "type": "Практика",
       "id": 1
     },
     {
-      "name": "Английский язык для начинающих",
+      "name": "Английский язык Elementary",
       "description": "Начните говорить на бытовом уровне. Заложите крепкую базу знаний. Учитесь в любом возрасте",
       "price": 15,
       "picture": "https://englex.ru/app/uploads/course-beginner@2x.png",
-      "type": "",
+      "type": "Уровень",
       "id": 2
     },
     {
@@ -21,7 +21,7 @@
       "description": "Универсальный курсы для работы и бизнеса. Практика навыков делового общения. Деловая лексика: переговоры и переписка.",
       "price": 15,
       "picture": "https://englex.ru/app/uploads/business-course-main@2x.png",
-      "type": "",
+      "type": "Направление",
       "id": 3
     },
     {
@@ -29,7 +29,7 @@
       "description": "Улучшение успеваемости в школе. Интересные задания для любого возраста. Преподаватели, умеющие ладить с детьми.",
       "price": 15,
       "picture": "https://englex.ru/app/uploads/children-d@2x.png",
-      "type": "",
+      "type": "Подготовительный",
       "id": 4
     },
     {
@@ -37,15 +37,15 @@
       "description": "Лучший способ разговаривать. Развиваем восприятие речи на слух. 25 актуальных тем с видео.",
       "price": 15,
       "picture": "https://englex.ru/app/uploads/course-speaking-practice@2x-1.png",
-      "type": "",
+      "type": "Практика",
       "id": 5
     },
     {
-      "name": "Английский язык для путешествий ",
-      "description": "Общение за границей без словарей. Репетиция диалогов: аэропорт, отель и пр. 35 туристических тем или экспресс-курс.",
+      "name": "Мединицинский USMLE",
+      "description": "Разрабатываем курс для Вас. Прорабатываем ваши слабые стороны. Английский язык для любых профессий.",
       "price": 17,
       "picture": "https://englex.ru/app/uploads/course-travelling@2x.png",
-      "type": "",
+      "type": "Направление",
       "id": 6
     },
     {
@@ -53,7 +53,7 @@
       "description": "Имитация реального общения. Подготовка в сжатые сроки. Составление резюме и cover letter.",
       "price": 15,
       "picture": "https://englex.ru/app/uploads/course-native@2x.png",
-      "type": "",
+      "type": "Практика",
       "id": 7
     },
     {
@@ -61,23 +61,23 @@
       "description": "Готовим к IELTS, TOEFL, FCE, CAE, CPE  и пр. Проработка всех разделов экзамена. Имитация экзамена или его частей.",
       "price": 10,
       "picture": "https://englex.ru/app/uploads/course-interview@2x.png",
-      "type": "",
+      "type": "Подготовительный",
       "id": 8
     },
     {
-      "name": "Постановка произношения ",
+      "name": "Английский язык Intermedia",
       "description": "Отрабатываем звуки и интонацию. Избавляем от заметного русского акцента. Развиваем восприятие речи на слух.",
       "price": 15,
       "picture": "https://englex.ru/app/uploads/course-phonetic@2x.png",
-      "type": "",
+      "type": "Уровень",
       "id": 9
     },
     {
-      "name": "Персональный курс английского языка",
+      "name": "Английский язык Advanced",
       "description": "Разрабатываем курс для Вас. Прорабатываем ваши слабые стороны. Английский язык для любых профессий.",
       "price": 25,
       "picture": "https://englex.ru/app/uploads/course-personal@2x.png",
-      "type": "",
+      "type": "Уровень",
       "id": 10
     },
     {
@@ -85,7 +85,7 @@
       "description": "Английский на уровне Intermedia в резюме. Актуальные темы: IT-проекты, ПО, ИИ. Общение с иностранным клиентами.",
       "price": 20,
       "picture": "https://englex.ru/app/uploads/it-course-image-4@2x.png",
-      "type": "",
+      "type": "Направление",
       "id": 11
     },
     {
@@ -93,7 +93,7 @@
       "description": "Устранение пробелов в знаниях грамматики. Простой разбор правил и исключений. Любой тест или экзамен - на пятерку.",
       "price": 10,
       "picture": "https://englex.ru/app/uploads/course-grammar@2x.png",
-      "type": "",
+      "type": "Практика",
       "id": 12
     },
     {
@@ -101,7 +101,7 @@
       "description": "Деловые встречи и поездки. Переговоры и презентации. Собеседование в посольстве.",
       "price": 16,
       "picture": "https://englex.ru/app/uploads/intensive-course@2x.png",
-      "type": "",
+      "type": "Уровень",
       "id": 13
     },
     {
@@ -109,7 +109,7 @@
       "description": "Вашему ребенку предстоит сдавать ЕГЭ по английскому языку? Эффективно подготовиться к нему помогут наши опытные преподаватели. Их ученики успешно сдавали экзамен в предыдущие годы. У вашего выпускника тоже получится. Подготовка к ЕГЭ онлайн позволит избежать ошибок, избавиться от страха перед ЕГЭ и заработать хороший балл.",
       "price": 10,
       "picture": "https://englex.ru/app/uploads/course-ege@2x.png",
-      "type": "",
+      "type": "Подготовительный",
       "id": 14
     }
   ],
@@ -131,14 +131,14 @@
       "title": "2-3 раза в неделю",
       "description": "Рекомендуемая интенсивность",
       "id": 3
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/ideas.svg",
       "title": "Преподаватель",
       "description": "Локальный или носитель языка",
       "id": 4
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/calendar-with-man.svg",
       "title": "от  850 руб",
       "description": "Стоимость за 1 урок",
