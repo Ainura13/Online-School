@@ -32,14 +32,7 @@ const EditCourse = () => {
 
   return (
     <Paper sx={{
-      height: '70vh' ,
-      backgroundImage: `url(https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80)`, 
-      position: 'relative', 
-      color: 'white',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'right',
-      opacity: '0.85'}}>
+      height: '70vh' }}>
 
     <Box sx={{ width: '50vw', margin: '10vh auto' }}>
     <Typography
