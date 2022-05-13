@@ -47,7 +47,7 @@ const SideBar = () => {
             <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="all"
+              defaultValue="все"
               name="radio-buttons-group"
               onChange={(e) => fetchByParams('type', e.target.value)}
             >
