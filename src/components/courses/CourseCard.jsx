@@ -81,12 +81,12 @@ React.useEffect(() => {
       <CardActions>
         {email == ADMIN ? (
           <>
-            <Button size="small" onClick={() => deleteProduct(item.id)}>
-              Delete
-            </Button>
 
-            <Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
+            <Button variant='outlined' color='success' size="small" onClick={() => navigate(`/edit/${item.id}`)}>
               Edit
+            </Button>
+            <Button variant='outlined' color='error' size="small" onClick={() => deleteProduct(item.id)}>
+              Delete
             </Button>
           </>
         ) : (
