@@ -12,20 +12,12 @@ import React from 'react';
 
 const ContactUs = () => {
   return (
-    <>
-      <Paper sx={{
-      height: '70vh' ,
-      backgroundImage: `url(https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80)`, 
-      position: 'relative', 
-      color: 'white',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'right',
-      opacity: '0.85'}}>
+    <Box sx={{py: '20vh', mt: '3px'}} className='bgImage1'>
       <Box
+      p={5}
         noValidate
         autoComplete="off"
-        sx={{ width: '50vw', margin: '15vh auto' }}
+        sx={{ width: '50vw', margin: '0 auto', background: 'white', borderRadius: '12px'}}
       >
         <Typography
           sx={{ fontSize: '2em', fontWeight: 600, fontFamily: 'Roboto' }}
@@ -67,8 +59,7 @@ const ContactUs = () => {
           Отправить
         </Button>
       </Box>
-      </Paper>
-    </>
+    </Box>
   );
 };
 
