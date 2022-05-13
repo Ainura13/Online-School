@@ -1,4 +1,4 @@
-import { Grid, InputAdornment, Paper, TextField } from '@mui/material';
+import { Divider, Grid, InputAdornment, Paper, TextField } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { useSearchParams } from 'react-router-dom';
@@ -8,6 +8,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { useProducts } from '../../contexts/CourseContextProvider';
+import { Box } from '@mui/system';
 
 const SideBar = () => {
   const { fetchByParams } = useProducts();
@@ -22,8 +23,8 @@ const SideBar = () => {
   }, [search]);
 
   return (
-    <Grid item md={3}>
-      <Paper elevation={5} sx={{ p: 2 }}>
+    <Grid item md={2} >
+      <Paper elevation={5} sx={{ p: 2, bgcolor:'#f5f5f5'}}>
         <TextField
           fullWidth
           id="input-with-icon-textfield"
@@ -39,35 +40,37 @@ const SideBar = () => {
           }}
           variant="standard"
         />
+          <Box sx={{display: 'flex', flexDirection: 'column'}}>
 
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
+          <FormLabel sx={{fontSize: '20px', m: '30px auto 10px'}} id="demo-radio-buttons-group-label">Price</FormLabel>
+        <FormControl sx={{ m: '2 auto'}}>
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="all"
             name="radio-buttons-group"
             onChange={(e) => fetchByParams('price_lte', e.target.value)}
-          >
+            >
             <FormControlLabel value="all" control={<Radio />} label="all" />
             <FormControlLabel
               value="10"
               control={<Radio />}
               label="less than 10$"
-            />
+              />
 
             <FormControlLabel
               value="30"
               control={<Radio />}
               label="less than 30$"
-            />
+              />
 
             <FormControlLabel
               value="50"
               control={<Radio />}
               label="less than 50$"
-            />
+              />
           </RadioGroup>
         </FormControl>
+              </Box>
       </Paper>
     </Grid>
   );
