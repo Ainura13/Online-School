@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from '@mui/material';
+import { Box, Button, Paper, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProducts } from '../../contexts/CourseContextProvider';
@@ -32,7 +32,17 @@ const AddProduct = () => {
   };
 
   return (
-    <Box sx={{ width: '60vw', margin: '10vh auto'}}>
+    <Paper sx={{
+    height: '70vh' ,
+    backgroundImage: `url(https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80)`, 
+    position: 'relative', 
+    color: 'white',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right',
+    opacity: '0.85'}}>
+
+    <Box sx={{ width: '50vw', margin: '10vh auto'}}>
       <Typography
       variant='h4' 
       align='center' 
@@ -100,6 +110,7 @@ const AddProduct = () => {
         CREATE PRODUCT
       </Button>
     </Box>
+    </Paper>
   );
 };
 
