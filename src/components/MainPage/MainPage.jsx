@@ -3,7 +3,7 @@ import { Button, Card, CardContent, CardMedia, Container, Grid, Paper, Typograph
 import { Box } from '@mui/system';
 import { Splide, SplideSlide} from '@splidejs/react-splide';
 import { useProducts } from '../../contexts/CourseContextProvider';
-// import '@splidejs/react-splide/css/sea-green';
+import '@splidejs/react-splide/css/sea-green';
 import SchoolIcon from '@mui/icons-material/School';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import FavoriteIcon from '@mui/icons-material/Favorite';
