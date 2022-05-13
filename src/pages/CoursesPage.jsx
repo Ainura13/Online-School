@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import SideBar from '../components/courses/Sidebar';
-import CourseList from '../components/courses/Courselist';
+import CourseList from '../components/courses/CourseList';
 
 const CoursesPage = () => {
     return (

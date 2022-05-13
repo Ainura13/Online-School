@@ -33,8 +33,8 @@ export const CourseDetails = () => {
             ${productDetails.price}
           </Typography>
           <Button variant='contained' sx={{fontSize: '0.7rem', padding: '14px 44px', width: '500px', m: '0 auto'}} onClick={() => addProductToCart(productDetails)}
-              color={checkProductInCart(productDetails.id) ? 'success' : 'primary'}
-          >{checkProductInCart(productDetails.id) ? 'Add to cart' : 'Delete from cart'}</Button>
+              color={checkProductInCart(productDetails.id) ? 'primary' : 'success'}
+          >{checkProductInCart(productDetails.id) ? 'Delete from cart' : 'Add to cart'}</Button>
         </Grid>
       </Grid>
     </>
