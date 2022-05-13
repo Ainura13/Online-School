@@ -97,16 +97,14 @@ const MainPage = () => {
                     Уроки проходят на интерактивной учебной платформе — общайтесь с преподавателем и выполняйте задания в одном окне браузера
                     </Typography>
                     <Box>
-                        <Grid container spacing={2} justifyContent='center'>
-                            <Grid item>
-                            <Link to="/courses" style={{textDecoration: 'none'}}>
+                            <Box item sx={{display: 'flex', justifyContent: 'center'}}>
+                            <Link to="/courses" style={{textDecoration: 'none', marginRight: '10px'}}>
                                 <Button variant='contained' color='success'>О курсах</Button>
                                 </Link>
                                 <Link to="/about" style={{textDecoration: 'none'}}>
                                 <Button variant='outlined' color='success'>О компании</Button>
                             </Link>
-                            </Grid>
-                        </Grid>
+                            </Box>
                     </Box>
 
                 </Container>
