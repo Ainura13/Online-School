@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from '@mui/material';
+import { Box, Button, Paper, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProducts } from '../../contexts/CourseContextProvider';
@@ -32,7 +32,25 @@ const AddProduct = () => {
   };
 
   return (
-    <Box sx={{ width: '200vh', margin: '10vh auto' }}>
+    <Paper sx={{
+    height: '70vh' ,
+    backgroundImage: `url(https://images.unsplash.com/photo-1524055988636-436cfa46e59e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80)`, 
+    position: 'relative', 
+    color: 'white',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right',
+    opacity: '0.85'}}>
+
+    <Box sx={{ width: '50vw', margin: '10vh auto'}}>
+      <Typography
+      variant='h4' 
+      align='center' 
+      color='textPrimary' 
+      gutterBottom
+      >
+        Admin Page
+      </Typography>
       <TextField
         fullWidth
         id="outlined-basic"
@@ -40,6 +58,7 @@ const AddProduct = () => {
         variant="outlined"
         name="name"
         onChange={handleInp}
+        sx={{mb: 2}}
       />
       <TextField
         fullWidth
@@ -48,6 +67,7 @@ const AddProduct = () => {
         variant="outlined"
         name="description"
         onChange={handleInp}
+        sx={{mb: 2}}
       />
       <TextField
         fullWidth
@@ -56,6 +76,7 @@ const AddProduct = () => {
         variant="outlined"
         name="price"
         onChange={handleInp}
+        sx={{mb: 2}}
       />
       <TextField
         fullWidth
@@ -64,6 +85,7 @@ const AddProduct = () => {
         variant="outlined"
         name="picture"
         onChange={handleInp}
+        sx={{mb: 2}}
       />
       <TextField
         fullWidth
@@ -72,19 +94,23 @@ const AddProduct = () => {
         variant="outlined"
         name="type"
         onChange={handleInp}
+        sx={{mb: 2}}
       />
       <Button
-        variant="outlined"
+        variant="contained"
+        color="success"
         fullWidth
         size="large"
         onClick={() => {
           addProduct(product);
           navigate('/products');
         }}
+        sx={{mb: 2}}
       >
         CREATE PRODUCT
       </Button>
     </Box>
+    </Paper>
   );
 };
 

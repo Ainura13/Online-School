@@ -12,7 +12,7 @@ const NotFoundPage = () => {
             <Container sx={{textAlign: 'center', mb: 10}}>
             <Link to="/" mr={4} style={{textDecoration: 'none'}}>
             <Button variant="contained" color="success" >
-                На главная 
+                Домой 
             </Button>
             </Link>
             </Container>
