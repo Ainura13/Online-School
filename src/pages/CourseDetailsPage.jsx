@@ -10,8 +10,10 @@ import SchoolIcon from '@mui/icons-material/School';
 const CourseDetailsPage = () => {
     return (
         <>
-        <Box sx={{py: 5, mt: 1, backgroundColor: '#a5d6a7'}}>
-                <Grid>
+        <Box sx={{ py: 5, mt: 1, backgroundColor: '#a5d6a7'}}>
+            <Box sx={{m: '0 auto', width: '80vw',}}>
+
+                <Grid >
                 <Typography variant='h2' align='center' color='textPrimary' sx={{mb: '90px'}} gutterBottom >
                 Характеристики курса
                     </Typography>
@@ -57,6 +59,7 @@ const CourseDetailsPage = () => {
                         </Typography>
                     </Grid>
                 </Grid>
+            </Box>
         </Box>
         <CourseDetails />
         </>
