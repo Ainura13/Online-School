@@ -3,7 +3,7 @@ import { Button, Card, CardContent, CardMedia, Container, Grid, Paper, Typograph
 import { Box } from '@mui/system';
 import { Splide, SplideSlide} from '@splidejs/react-splide';
 import { useProducts } from '../../contexts/CourseContextProvider';
-import '@splidejs/react-splide/css/sea-green';
+// import '@splidejs/react-splide/css/sea-green';
 import SchoolIcon from '@mui/icons-material/School';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -21,14 +21,7 @@ const MainPage = () => {
         getCards();
       }, []);
 
-      const options = {
-        type         : 'loop',
-        gap          : '1rem',
-        autoplay     : true,
-        pauseOnHover : false,
-        resetProgress: false,
-        height       : '15rem',
-      };
+    
 
     return (
         <>
@@ -75,7 +68,7 @@ const MainPage = () => {
                                 paragraph
                                 >Выбирайте комфортный английский.
                                 Английский по Скайпу — это возможность заниматься по удобному графику из любой точки мира.
-                                Кроме этого в онлайн-школе английского языка «Easy to say» вы найдете:
+                                Кроме этого в онлайн-школе английского языка «Online School» вы найдете:
                                 </Typography>
                                 <Link to="/contacts" style={{textDecoration: 'none'}}>
                                 <Button variant='contained' color="success" sx={{marginTop: (5)}}>

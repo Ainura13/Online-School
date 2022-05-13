@@ -24,7 +24,6 @@ const CourseList = () => {
   const count = Math.ceil(products.length / itemsPerPage);
 
   const handleChange = (e, p) => {
-    console.log(p);
     setPage(p);
   };
   // pagination
@@ -65,7 +64,7 @@ const CourseList = () => {
         </Box>
         <Pagination
           count={count}
-          color='secondary'
+          color='success'
           variant="outlined"
           shape="rounded"
           onChange={handleChange}
