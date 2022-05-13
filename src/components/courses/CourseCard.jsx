@@ -34,16 +34,20 @@ React.useEffect(() => {
 
   return (
     <Card 
-    onClick={() => navigate(`/courses/${item.id}`)}
     
     sx={{my: 3, display:'flex', justifyContent:'space-around', maxWidth: 600, maxHeight: 400, border:"2px solid #2e7d32", }}>
       <CardMedia
+    onClick={() => navigate(`/courses/${item.id}`)}
+
         component="img"
         height="200"
         image={item.picture}
         alt={item.name}
       />
-      <CardContent>
+      <CardContent
+    onClick={() => navigate(`/courses/${item.id}`)}
+      
+      >
         <Typography 
         gutterBottom variant="h5" 
         component="div"
