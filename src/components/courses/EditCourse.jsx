@@ -20,6 +20,8 @@ const EditCourse = () => {
   }, []);
 
 
+  
+
   const handleInp = (e) => {
     let obj = {
       ...product,

@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { IconButton } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCart } from '../../contexts/CartContextProvider';
@@ -16,7 +16,8 @@ import { useProducts } from '../../contexts/CourseContextProvider';
 export default function CourseCard({ item }) {
   const navigate = useNavigate();
 
-  const { deleteProduct } = useProducts();
+  const { id } = useParams();
+  const { getProductDetails, productDetails, deleteProduct } = useProducts();
   const { addProductToCart, checkProductInCart } = useCart();
 
   const {
@@ -24,6 +25,12 @@ export default function CourseCard({ item }) {
     user: { email },
   } = useAuth();
   console.log(email);
+
+React.useEffect(() => {
+  getProductDetails(id)
+
+}, [])
+
 
   return (
     <Card 

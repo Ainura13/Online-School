@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Divider, Grid, Pagination } from '@mui/material';
+import { Grid, Pagination } from '@mui/material';
 import { Box } from '@mui/system';
 import { useSearchParams } from 'react-router-dom';
 import { useProducts } from '../../contexts/CourseContextProvider';
