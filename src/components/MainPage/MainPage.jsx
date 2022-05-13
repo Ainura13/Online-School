@@ -32,7 +32,8 @@ const MainPage = () => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
-            opacity: '0.8'}}>
+            opacity: '0.8',
+            }}>
                 <Container fixed>
                     <Box sx={{
                         position: 'absolute',
@@ -175,7 +176,7 @@ const MainPage = () => {
             </Grid>
             </Container>
             </Box>
-            <Grid container sx={{display: 'flex', flexDirection: 'row', alignItems: 'space-around', flexWrap:'wrap', backgroundColor: '#a5d6a7', padding: (9)}}>
+            <Grid container sx={{display: 'flex', flexDirection: 'row', alignItems: 'space-around', flexWrap:'wrap', backgroundColor: '#a5d6a7', p: '10vh auto'}}>
                 <Grid item md={4}>
             <Splide options={ {rewind: true, gap   : '1rem',} } aria-label="My Favorite Images" >
       <SplideSlide>
