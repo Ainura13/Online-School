@@ -26,13 +26,13 @@ import Cart from '../cart/Cart';
 
 
 const pages = [
-  { name: 'COURSES', link: '/courses', id: 1 },
-  { name: 'ABOUT US', link: '/about', id: 2 },
-  { name: 'CONTACT US', link: '/contacts', id: 3 },
+  { name: ' НАШИ КУРСЫ', link: '/courses', id: 1 },
+  { name: 'О НАС', link: '/about', id: 2 },
+  { name: 'СВЯЗАТЬСЯ С НАМИ', link: '/contacts', id: 3 },
   // { name: 'ADMIN', link: '/admin', id: 4 },
 ];
 
-const settings = ['Profile', 'Account', '', 'Logout'];
+const settings = ['ПРОФИЛЬ', 'АККАУНТ', 'ВЫХОД'];
 
 const Navbar = () => {
   const {
@@ -86,13 +86,10 @@ const Navbar = () => {
   console.log(count)
 
   return (
-    <AppBar position="static" 
-    sx={{bgcolor: '#fff'}}
-    mb={5}
-    >
+    <AppBar position="static" sx={{ bgcolor: '#fff' }} mb={5}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to='/' mr={4}>
+          <Link to="/" mr={4}>
             <img
               src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/252/7254531252_97fb15cc-6b93-44d9-ac6d-71685d8ef5d2.png?cb=1652175155"
               alt="123"
@@ -239,7 +236,7 @@ const Navbar = () => {
               </Button>
             ) : (
               <Link to="/auth">
-                <Button sx={{ color: 'black', fontWeight: 'bold'}}>
+                <Button sx={{ color: 'black', fontWeight: 'bold' }}>
                   <LoginSharpIcon />
                 </Button>
               </Link>

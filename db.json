@@ -1,7 +1,6 @@
 {
   "courses": [
-
-{
+    {
       "name": "Общий разговорный",
       "description": "Повышение уровня знаний. 70% урока ваша разговорная речь. Преодоление языкового и слухового барьера",
       "price": 10,
@@ -24,7 +23,7 @@
       "picture": "https://englex.ru/app/uploads/business-course-main@2x.png",
       "type": "",
       "id": 3
-    }, 
+    },
     {
       "name": "Английский для детей",
       "description": "Улучшение успеваемости в школе. Интересные задания для любого возраста. Преподаватели, умеющие ладить с детьми.",
@@ -32,7 +31,7 @@
       "picture": "https://englex.ru/app/uploads/children-d@2x.png",
       "type": "",
       "id": 4
-    }, 
+    },
     {
       "name": "Разговорная практика английского языка",
       "description": "Лучший способ разговаривать. Развиваем восприятие речи на слух. 25 актуальных тем с видео.",
@@ -40,7 +39,7 @@
       "picture": "https://englex.ru/app/uploads/course-speaking-practice@2x-1.png",
       "type": "",
       "id": 5
-    }, 
+    },
     {
       "name": "Английский язык для путешествий ",
       "description": "Общение за границей без словарей. Репетиция диалогов: аэропорт, отель и пр. 35 туристических тем или экспресс-курс.",
@@ -120,42 +119,36 @@
       "title": "1 на 1",
       "description": "Занятия с преподавателем",
       "id": 1
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/time-with-women.svg",
       "title": "50 минут",
       "description": "Длительность занятия",
       "id": 2
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/calendar-with-man.svg",
       "title": "2-3 раза в неделю",
       "description": "Рекомендуемая интенсивность",
       "id": 3
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/ideas.svg",
       "title": "Преподаватель",
       "description": "Локальный или носитель языка",
       "id": 4
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
       "title": "от  850 руб",
       "description": "Стоимость за 1 урок",
       "id": 5
-
-      },
-      {
-          "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
-          "title": "Понятная грамматика",
+    },
+    {
+      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
+      "title": "Понятная грамматика",
       "description": "Обрабатываем правила на простом языке",
       "id": 6
-
-      }
+    }
   ]
 }

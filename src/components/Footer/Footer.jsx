@@ -5,13 +5,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
-import BusinessIcon from '@mui/icons-material/Business';
+import PlaceIcon from '@mui/icons-material/Place';
 
 const Footer = () => {
   function Copyright(props) {
     return (
       <Typography
-        variant="body2"
+        variant="body3"
         color="text.secondary"
         align="center"
         {...props}
@@ -30,13 +30,13 @@ const Footer = () => {
     <Box
       px={{ xs: 3, sm: 10 }}
       py={{ xs: 3, sm: 3 }}
-      bgcolor="#656b72c7"
-      color="rgb(15 14 14)"
+      bgcolor="#656b724f"
+      color="rgb(15 14 15)"
     >
       <Container maxWidth="lg">
         <Grid container spacing={8}>
           <Grid item xs={4} sm={2} sx={{ mt: '0.6rem', my: '0.5rem' }}>
-            <Box sx={{ fontWeight: 'medium', fontSize: '1.1rem' }}>Help</Box>
+            <Box sx={{ fontWeight: 'medium', fontSize: '1.1rem' }}>Помощь</Box>
             <Box my={{ xs: 1, sm: 2 }}>
               <Link
                 herf="/"
@@ -44,7 +44,7 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '0.9rem' }}
               >
-                Vacancies
+                Вакансии
               </Link>
             </Box>
             <Box my={{ xs: 1, sm: 2 }}>
@@ -54,7 +54,7 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '0.9rem' }}
               >
-                Support
+                Поддержка
               </Link>
             </Box>
             <Box my={{ xs: 1, sm: 2 }}>
@@ -64,14 +64,14 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '0.9rem' }}
               >
-                Privacy
+                Конфиденциальность
               </Link>
             </Box>
           </Grid>
 
           <Grid item xs={6} sm={4} sx={{ mt: '0.6rem' }}>
             <Box sx={{ fontWeight: 'medium', fontSize: '1.1rem' }}>
-              Messages
+              Сообщения
             </Box>
             <Box my={{ xs: 1, sm: 2 }}>
               <Link
@@ -80,7 +80,7 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '0.9rem' }}
               >
-                Investors
+                Инвесторам
               </Link>
             </Box>
             <Box my={{ xs: 1, sm: 2 }}>
@@ -90,7 +90,7 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '0.9rem' }}
               >
-                Developers
+                Разработчикам
               </Link>
             </Box>
             <Box my={{ xs: 1, sm: 2 }}>
@@ -100,7 +100,7 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '0.9rem' }}
               >
-                Partners
+                Партнерам
               </Link>
             </Box>
             <Box my={{ xs: 1, sm: 2 }}>
@@ -160,7 +160,7 @@ const Footer = () => {
                 underline="hover"
                 sx={{ fontSize: '1rem', display: 'flex' }}
               >
-                <BusinessIcon /> Bishkek ,str.Tabyshalieva 29, +996 0555 555 692
+                <PlaceIcon /> г.Бишкек,ул.Табышалиева 29, +996 0555 555 692
               </Link>
             </Box>
           </Grid>
