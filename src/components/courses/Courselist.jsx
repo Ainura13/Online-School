@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Grid, Pagination } from '@mui/material';
+import { Divider, Grid, Pagination } from '@mui/material';
 import { Box } from '@mui/system';
 import { useSearchParams } from 'react-router-dom';
 import { useProducts } from '../../contexts/CourseContextProvider';
@@ -43,6 +43,10 @@ const CourseList = () => {
         md={9}
       >
         <Box
+          sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}
+        >
+
+        <Box
           sx={{
             display: 'flex',
             justifyContent:'space-evenly',
@@ -50,16 +54,15 @@ const CourseList = () => {
             minHeight: '50vh',
             mb: '3.5vh',
           }}
-        >
+          >
           {products ? (
             currentData().map((item) => (
               <CourseCard item={item} key={item.id} />
-            ))
-          ) : (
-            <h2>Loading...</h2>
-          )}
+              ))
+              ) : (
+                <h2>Loading...</h2>
+                )}
         </Box>
-
         <Pagination
           count={count}
           color='secondary'
@@ -67,7 +70,10 @@ const CourseList = () => {
           shape="rounded"
           onChange={handleChange}
           page={page}
-        />
+
+          />
+          </Box>
+
       </Grid>
     </>
   );

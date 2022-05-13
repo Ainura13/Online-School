@@ -9,8 +9,8 @@ const CoursesPage = () => {
     return (
         <Box p={5}>
       <Grid container spacing={3}>
-        <CourseList />
         <SideBar />
+        <CourseList />
       </Grid>
     </Box>
   );
