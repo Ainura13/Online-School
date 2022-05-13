@@ -196,7 +196,7 @@ const Navbar = () => {
                 <Button sx={{ my: 2, color: 'black' }}>ADMIN PAGE</Button>
               </Link>
             ) : (
-                <Button sx={{ my: 2, color: 'black' }}>
+                <Box sx={{ my: 2, color: 'black' }}>
                   <Badge badgeContent={count} color="error">
                     
                     {['right'].map((anchor) => (
@@ -210,6 +210,7 @@ const Navbar = () => {
                         anchor={anchor}
                         variant='persistent'
                         open={state[anchor]}
+                        onClose={toggleDrawer(anchor, false)}
                         PaperProps={{
                           sx: { width: "40%" },
                         }}
@@ -224,7 +225,7 @@ const Navbar = () => {
                     </React.Fragment>
                     ))}
                   </Badge>
-                </Button>
+                </Box>
             )}
           </Box>
 
