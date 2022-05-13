@@ -6,11 +6,14 @@ import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import { useCart } from '../../contexts/CartContextProvider';
-import { autocompleteClasses, Button, Divider } from '@mui/material';
-import { hover } from '@testing-library/user-event/dist/hover';
+import { Button, Divider } from '@mui/material';
 import { Box } from '@mui/system';
+import Payment from '../Payment/Payment';
+import { Navigate, useNavigate } from 'react-router-dom';
+
+
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -31,10 +34,10 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 
-export default function Cart() {
+export default function Cart({}) {
   const { getCart, cart, deleteCartProduct } = useCart();
 
-  console.log(cart);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     getCart();
@@ -44,6 +47,7 @@ export default function Cart() {
     localStorage.removeItem('cart');
     getCart();
   };
+
 
   return (
     <TableContainer >
@@ -81,7 +85,7 @@ export default function Cart() {
             <Box sx={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
 
       <Button variant='outlined' sx={{maxHeight: 35}} onClick={cartCleaner}> Clean cart</Button>
-      <Button variant='contained' sx={{my: 3, alignSelf: 'center', border: '1px solid #2e7d32', borderRadius: '4%', color: 'white', bgcolor: '#a5d6a7'}} onClick={cartCleaner}> BUY NOW FOR {cart?.totalPrice} $</Button>
+      <Button variant='contained' sx={{my: 3, alignSelf: 'center', border: '1px solid #2e7d32', borderRadius: '4%', color: 'white', bgcolor: '#a5d6a7'}} onClick={()=>navigate('/payment')}> BUY NOW FOR {cart?.totalPrice} $</Button>
             </Box>
     </TableContainer>
   );

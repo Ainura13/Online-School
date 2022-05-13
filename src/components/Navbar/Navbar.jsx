@@ -70,13 +70,15 @@ const Navbar = () => {
     setState({ ...state, [anchor]: open });
   };
 
+ 
+
   const list = (anchor) => (
     <Box
       sx={{ widt: 'auto' }}
       role="presentation"
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Cart />
+      <Cart/>
 
     </Box>
   );
@@ -84,7 +86,7 @@ const Navbar = () => {
   console.log(count)
 
   return (
-    <AppBar position="static" sx={{ bgcolor: '#fff' }} mb={5}>
+    <AppBar position="static" sx={{ bgcolor: '#fff', padding: '0 0 10px', boxShadow: '10px 5px 5px #556b724f'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to="/" mr={4}>
@@ -216,6 +218,7 @@ const Navbar = () => {
                         onClick={toggleDrawer(anchor, false)}
                         sx={{alignSelf: 'flex-end'}}/>
                         {list(anchor)}
+
                       </Drawer>
                     </React.Fragment>
                     ))}

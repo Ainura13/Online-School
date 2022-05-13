@@ -11,6 +11,7 @@ import CoursesPage from '../pages/CoursesPage';
 import EditCoursePage from '../pages/EditCoursePage';
 import { useAuth } from '../contexts/AuthContextProvider';
 import { ADMIN } from '../helpers/consts';
+import PaymentPage from '../pages/PaymentPage';
 
 
 const MainRoutes = () => {
@@ -47,9 +48,14 @@ const MainRoutes = () => {
       id: 6,
     },
     {
+      link: '/payment',
+      element: <PaymentPage />,
+      id: 7,
+    },
+    {
       link: '*',
       element: <NotFoundPage />,
-      id: 7,
+      id: 8,
     },
   ];
 

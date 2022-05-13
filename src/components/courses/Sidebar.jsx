@@ -47,31 +47,31 @@ const SideBar = () => {
             <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="all"
+              defaultValue="все"
               name="radio-buttons-group"
               onChange={(e) => fetchByParams('type', e.target.value)}
             >
-              <FormControlLabel value="все" control={<Radio />} label="все" />
+              <FormControlLabel value="all" control={<Radio />} label="все" />
 
               <FormControlLabel
-                value="Практика"
+                value="practice"
                 control={<Radio />}
                 label="Практика"
               />
 
               <FormControlLabel
-                value="Уровень"
+                value="level"
                 control={<Radio />}
                 label="Уровень"
               />
 
               <FormControlLabel
-                value="Направление"
+                value="direction"
                 control={<Radio />}
                 label="Направление"
               />
               <FormControlLabel
-                value="Подготовительный"
+                value="preparation"
                 control={<Radio />}
                 label="Подготовительный"
               />
