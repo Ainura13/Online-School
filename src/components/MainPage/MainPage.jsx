@@ -8,6 +8,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import { Link } from 'react-router-dom';
 
 
 const MainPage = () => {
@@ -76,10 +77,11 @@ const MainPage = () => {
                                 Английский по Скайпу — это возможность заниматься по удобному графику из любой точки мира.
                                 Кроме этого в онлайн-школе английского языка «Easy to say» вы найдете:
                                 </Typography>
-
+                                <Link to="/contacts" style={{textDecoration: 'none'}}>
                                 <Button variant='contained' color="success" sx={{marginTop: (5)}}>
-                                    Попробовать бесплатно
+                                    Записаться на курс
                                 </Button>
+                                </Link>
                             </Box>
                         </Grid>
                     </Grid>
@@ -97,8 +99,12 @@ const MainPage = () => {
                     <Box>
                         <Grid container spacing={2} justifyContent='center'>
                             <Grid item>
-                                <Button variant='contained' color='success'>Start now</Button>
-                                <Button variant='outlined' color='success'>Start now</Button>
+                            <Link to="/courses" style={{textDecoration: 'none'}}>
+                                <Button variant='contained' color='success'>О курсах</Button>
+                                </Link>
+                                <Link to="/about" style={{textDecoration: 'none'}}>
+                                <Button variant='outlined' color='success'>О компании</Button>
+                            </Link>
                             </Grid>
                         </Grid>
                     </Box>
@@ -133,7 +139,8 @@ const MainPage = () => {
                     ))}
                 </Grid>
             </Container>
-            <Box sx={{backgroundColor: '#a5d6a7', padding: (9)}}>
+            
+            <Box sx={{backgroundColor: '#f5f5f5', padding: (9)}}>
             <Container>
             <Grid>
                 <Typography variant='h2' align='center' color='textPrimary' gutterBottom>
@@ -177,7 +184,7 @@ const MainPage = () => {
             </Grid>
             </Container>
             </Box>
-            <Grid container sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', flexWrap:'wrap', backgroundColor: '#f5f5f5 ', padding: (9)}}>
+            <Grid container sx={{display: 'flex', flexDirection: 'row', alignItems: 'space-around', flexWrap:'wrap', backgroundColor: '#a5d6a7', padding: (9)}}>
                 <Grid item md={4}>
             <Splide options={ {rewind: true, gap   : '1rem',} } aria-label="My Favorite Images" >
       <SplideSlide>
@@ -238,27 +245,27 @@ const MainPage = () => {
         </SplideSlide>
     </Splide>
                 </Grid >
-                <Grid item sx={{ display:'flex', flexDirection: 'column', justifyContent:'space-around', paddingLeft:'5vh'}}>
+                <Grid item sx={{height: 400, display:'flex', flexDirection: 'column', justifyContent:'space-evenly', my: '10px', paddingTop:'20vh', paddingLeft:'5vh'}}>
                 <Box sx={{display:'flex'}}>
-                <SchoolIcon sx={{fontSize:'10vh', color: '#a5d6a7'}}/>
+                <SchoolIcon sx={{fontSize:'10vh', color: 'white'}}/>
                 <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary'>
                 Имеют педагогическое образование и многолетний опыт работы
                 </Typography >
                 </Box>
                 <Box sx={{display:'flex'}}>
-                <TextSnippetIcon sx={{fontSize:'10vh', color: '#a5d6a7'}}/>
+                <TextSnippetIcon sx={{fontSize:'10vh', color: 'white'}}/>
                 <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary' gutterBottom>
                 Проходят многоэтапный отбор
                 </Typography >
                 </Box>
                 <Box sx={{display:'flex'}}>
-                <FavoriteIcon sx={{fontSize:'10vh', color: '#a5d6a7'}}/>
+                <FavoriteIcon sx={{fontSize:'10vh', color: 'white'}}/>
                 <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary'>
                 Подбираются индивидуально под каждого студента
                 </Typography >
                 </Box>
                 <Box sx={{display:'flex'}}>
-                <AutoGraphIcon sx={{fontSize:'10vh', color: '#a5d6a7'}}/>
+                <AutoGraphIcon sx={{fontSize:'10vh', color: 'white'}}/>
                 <Typography variant='body1' sx={{fontSize: '23px', padding: '5vh', color:'textSecondary'}} align='center' color='textPrimary'>
                 Проходят регулярные тренинги и курсы повышения квалификации
                 </Typography >
