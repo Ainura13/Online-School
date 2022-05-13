@@ -1,11 +1,10 @@
 {
   "courses": [
-
-{
+    {
       "name": "Общий разговорный",
       "description": "Повышение уровня знаний. 70% урока ваша разговорная речь. Преодоление языкового и слухового барьера",
       "price": 10,
-      "picture": "https://resumeshkin.com/ru/uploads/posts/2020-08/1598034791_uchitel-anglijskogo-yazyka-gotovitsya-k-uroku.jpg",
+      "picture": "https://englex.ru/app/uploads/general-course@2x.png",
       "type": "",
       "id": 1
     },
@@ -13,7 +12,7 @@
       "name": "Английский язык для начинающих",
       "description": "Начните говорить на бытовом уровне. Заложите крепкую базу знаний. Учитесь в любом возрасте",
       "price": 15,
-      "picture": "https://thumbs.dreamstime.com/b/%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B5-%D0%BB%D1%8E%D0%B4%D0%B8-%D1%83%D1%87%D0%B0%D1%82%D1%81%D1%8F-%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B8%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8E-%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B0-%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2%D0%BE%D0%B9-%D1%88%D0%BA%D0%BE%D0%BB%D1%8B-195319080.jpg",
+      "picture": "https://englex.ru/app/uploads/course-beginner@2x.png",
       "type": "",
       "id": 2
     },
@@ -24,15 +23,15 @@
       "picture": "https://static.tildacdn.com/tild3835-3632-4034-a663-363164363436/600.jpg",
       "type": "",
       "id": 3
-    }, 
+    },
     {
       "name": "Английский для детей",
       "description": "Улучшение успеваемости в школе. Интересные задания для любого возраста. Преподаватели, умеющие ладить с детьми.",
       "price": 15,
-      "picture": "https://1g9.ru/wp-content/uploads/2017/06/engchil.jpg",
+      "picture": "https://englex.ru/app/uploads/children-d@2x.png",
       "type": "",
       "id": 4
-    }, 
+    },
     {
       "name": "Разговорная практика английского языка",
       "description": "Лучший способ разговаривать. Развиваем восприятие речи на слух. 25 актуальных тем с видео.",
@@ -40,7 +39,7 @@
       "picture": "https://lifehacker.ru/wp-content/uploads/2018/12/Kak-otkryt-shkolu-angliJskogo-yazyka_1543786397.jpg",
       "type": "",
       "id": 5
-    }, 
+    },
     {
       "name": "Английский язык для путешествий ",
       "description": "Общение за границей без словарей. Репетиция диалогов: аэропорт, отель и пр. 35 туристических тем или экспресс-курс.",
@@ -60,8 +59,8 @@
     {
       "name": "Подготовка к экзаменам",
       "description": "Готовим к IELTS, TOEFL, FCE, CAE, CPE  и пр. Проработка всех разделов экзамена. Имитация экзамена или его частей.",
-      "price": 15,
-      "picture": "https://img.graphicsurf.com/2020/06/Kid-English-learning-vector-design.jpg",
+      "price": 10,
+      "picture": "https://englex.ru/app/uploads/course-interview@2x.png",
       "type": "",
       "id": 8
     },
@@ -104,6 +103,14 @@
       "picture": "https://thumbs.dreamstime.com/b/%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%BE%D0%BA-%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82-%D1%81%D0%BB%D1%83%D1%88%D0%B0%D0%B5%D1%82-%D1%83%D1%80%D0%BE%D0%BA-%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8F-%D0%B4%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-177236319.jpg",
       "type": "",
       "id": 13
+    },
+    {
+      "name": "Подготовка к ОРТ по английскому по Скайпу",
+      "description": "Вашему ребенку предстоит сдавать ЕГЭ по английскому языку? Эффективно подготовиться к нему помогут наши опытные преподаватели. Их ученики успешно сдавали экзамен в предыдущие годы. У вашего выпускника тоже получится. Подготовка к ЕГЭ онлайн позволит избежать ошибок, избавиться от страха перед ЕГЭ и заработать хороший балл.",
+      "price": 10,
+      "picture": "https://englex.ru/app/uploads/course-ege@2x.png",
+      "type": "",
+      "id": 14
     }
   ],
   "cards": [
@@ -112,42 +119,36 @@
       "title": "1 на 1",
       "description": "Занятия с преподавателем",
       "id": 1
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/time-with-women.svg",
       "title": "50 минут",
       "description": "Длительность занятия",
       "id": 2
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/calendar-with-man.svg",
       "title": "2-3 раза в неделю",
       "description": "Рекомендуемая интенсивность",
       "id": 3
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/ideas.svg",
       "title": "Преподаватель",
       "description": "Локальный или носитель языка",
       "id": 4
-
-      },
-      {
+    },
+    {
       "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
       "title": "от  850 руб",
       "description": "Стоимость за 1 урок",
       "id": 5
-
-      },
-      {
-          "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
-          "title": "Понятная грамматика",
+    },
+    {
+      "image": "https://cdn-englishdom.gcdn.co/dsd/img/page/main/piggy-bank.svg",
+      "title": "Понятная грамматика",
       "description": "Обрабатываем правила на простом языке",
       "id": 6
-
-      }
+    }
   ]
 }

@@ -32,7 +32,7 @@ const AddProduct = () => {
   };
 
   return (
-    <Box sx={{ width: '60vw', margin: '10vh auto' }}>
+    <Box sx={{ width: '200vh', margin: '10vh auto' }}>
       <TextField
         fullWidth
         id="outlined-basic"

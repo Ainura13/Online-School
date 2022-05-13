@@ -26,15 +26,21 @@ export default function CourseCard({ item }) {
   console.log(email);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card 
+    onClick={() => navigate(`/courses/${item.id}`)}
+    
+    sx={{my: 3, display:'flex', justifyContent:'space-around', maxWidth: 600, maxHeight: 400, border:"2px solid #2e7d32", }}>
       <CardMedia
         component="img"
-        height="140"
+        height="200"
         image={item.picture}
         alt={item.name}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography 
+        gutterBottom variant="h5" 
+        component="div"
+        >
           {item.name}
         </Typography>
 
@@ -50,7 +56,6 @@ export default function CourseCard({ item }) {
         <Typography
           variant="body2"
           color="text.secondary"
-          onClick={() => navigate(`/products/${item.id}`)}
           sx={{
             overflow: 'hidden',
             textOverflow: 'ellipsis',
