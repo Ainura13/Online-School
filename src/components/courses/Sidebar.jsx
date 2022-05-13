@@ -40,6 +40,48 @@ const SideBar = () => {
           }}
           variant="standard"
         />
+
+
+<Grid>
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="all"
+              name="radio-buttons-group"
+              onChange={(e) => fetchByParams('type', e.target.value)}
+            >
+              <FormControlLabel value="все" control={<Radio />} label="все" />
+
+              <FormControlLabel
+                value="Практика"
+                control={<Radio />}
+                label="Практика"
+              />
+
+              <FormControlLabel
+                value="Уровень"
+                control={<Radio />}
+                label="Уровень"
+              />
+
+              <FormControlLabel
+                value="Направление"
+                control={<Radio />}
+                label="Направление"
+              />
+              <FormControlLabel
+                value="Подготовительный"
+                control={<Radio />}
+                label="Подготовительный"
+              />
+
+            </RadioGroup>
+          </FormControl>
+        </Grid>
+
+
+
           <Box sx={{display: 'flex', flexDirection: 'column'}}>
 
           <FormLabel sx={{fontSize: '20px', m: '30px auto 10px'}} id="demo-radio-buttons-group-label">Price</FormLabel>
